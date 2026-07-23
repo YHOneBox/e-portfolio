@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const updateNotice = document.getElementById('update-notice');
+    const updateNoticeClose = document.getElementById('update-notice-close');
+    const NOTICE_KEY = 'updateNoticeDismissed';
+
+    if (updateNotice) {
+        if (sessionStorage.getItem(NOTICE_KEY) === '1') {
+            updateNotice.classList.add('is-hidden');
+        } else {
+            document.body.classList.add('has-update-notice');
+        }
+
+        updateNoticeClose?.addEventListener('click', () => {
+            updateNotice.classList.add('is-hidden');
+            document.body.classList.remove('has-update-notice');
+            sessionStorage.setItem(NOTICE_KEY, '1');
+            window.dispatchEvent(new Event('resize'));
+        });
+    }
+
     const canvas = document.getElementById('starfield');
     const ctx = canvas.getContext('2d');
     let width, height;
