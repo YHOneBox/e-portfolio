@@ -1,74 +1,365 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YH(網站更新測試中...)</title>
-    <link rel="stylesheet" href="files/style.css">
+    <meta name="description" content="Yi-Ho Chang (YH) — AI engineer portfolio covering applied machine learning, full-stack systems, and interactive product work.">
+    <meta name="theme-color" content="#0b0d12">
+    <title>Yi-Ho Chang — AI Engineer</title>
+    <!-- SWAP: Replace files/profile.png with a square headshot if you add a new photo. -->
+    <link rel="icon" href="files/profile.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <div id="update-notice" class="update-notice" role="status">
-        <p class="update-notice-text">本網站持續更新中，內容尚未完成 · This site is still under construction</p>
-        <button type="button" id="update-notice-close" class="update-notice-close" aria-label="Close notice">&times;</button>
+        <p class="update-notice-text">This site is still being updated and is not yet finished.</p>
+        <button type="button" id="update-notice-close" class="update-notice-close" aria-label="Dismiss update notice">&times;</button>
     </div>
-    <div class="container">        <aside class="sidebar">
-            <div class="profile-section">
-                <div class="profile-pic-placeholder">
-                    <img src="files/profile.png" alt="Profile Picture" class="profile-pic">
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="#home" aria-label="Yi-Ho Chang, back to top">YH</a>
+
+            <nav id="site-nav" class="site-nav" aria-label="Primary">
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" id="theme-toggle" class="icon-btn" aria-label="Switch to light mode" aria-pressed="false">
+                    <span class="theme-icon theme-icon-moon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M21 14.3A8.5 8.5 0 1 1 9.7 3 7 7 0 0 0 21 14.3z"></path>
+                        </svg>
+                    </span>
+                    <span class="theme-icon theme-icon-sun" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.2 6.2 4.8 4.8M19.2 19.2l-1.4-1.4M17.8 6.2l1.4-1.4M6.2 17.8l-1.4 1.4"></path>
+                        </svg>
+                    </span>
+                </button>
+                <button type="button" id="menu-toggle" class="icon-btn menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav">
+                    <span class="hamburger" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="home" class="panel panel-hero" aria-labelledby="hero-title">
+            <div class="panel-fx" aria-hidden="true"></div>
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">SYS.01 // Hero</p>
+                    <p class="status-line"><span class="pulse"></span> AI Engineer · Applied ML · Systems</p>
+                    <h1 id="hero-title">Yi-Ho Chang <span class="hero-name-cn">張翊禾</span></h1>
+                    <p class="tagline">I build practical AI products that stay usable in the real world — from model pipelines to the interfaces people actually click.</p>
+                    <p class="value-prop">MEng Computer Science (AI minor) at Oregon State University. I ship end-to-end systems across machine learning, web platforms, and interactive software, with a bias toward clear architecture and measurable outcomes.</p>
+                    <div class="hero-ctas">
+                        <a class="btn btn-primary" href="#projects">View Projects</a>
+                        <!-- SWAP: Place your PDF at assets/Yi-Ho-Chang-Resume.pdf -->
+                        <a class="btn btn-secondary" href="assets/Yi-Ho-Chang-Resume.pdf" download>Download Resume</a>
+                        <a class="btn btn-ghost" href="#contact">Contact Me</a>
+                    </div>
                 </div>
-                <div class="profile-info">
-                    <h2>張翊禾<br>Yi-Ho Chang</h2>
-                    <p>AI工程師<br>AI Engineer</p>
+                <div class="hero-media">
+                    <figure class="portrait-frame">
+                        <img src="files/profile.png" alt="Portrait of Yi-Ho Chang" width="360" height="360">
+                        <span class="hud-corner hud-tl"></span>
+                        <span class="hud-corner hud-tr"></span>
+                        <span class="hud-corner hud-bl"></span>
+                        <span class="hud-corner hud-br"></span>
+                    </figure>
                 </div>
             </div>
-              <div class="content-grid">
-                <div class="grid-item">
-                    <h3>學歷 Education</h3>
-                    <ul>
-                        <li>Oregon State University (MEng)<br>Major in Computer Science & Minor in AI</li>
-                        <li>國立臺中教育大學 (BS)<br>資訊工程&數位內容科技 雙主修</li>
-                    </ul>
-                </div>
+        </section>
 
-                <div class="grid-item">
-                    <h3>個人簡介 Introduction</h3>
-                    <p style="text-align: left;"></p><br>您好，我是YH，個性隨和外向，喜歡嘗試新事物、探索未知和挑戰極限，在資訊領域的專長主要是AI應用開發和系統開發。<br><br>歡迎寄信或是私訊聯絡我！</p>
+        <section id="about" class="panel panel-about" aria-labelledby="about-title">
+            <div class="panel-fx" aria-hidden="true"></div>
+            <div class="wrap">
+            <div class="section-heading">
+                <p class="eyebrow">SYS.02 // About</p>
+                <h2 id="about-title">Engineering with curiosity, then shipping it</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-copy">
+                    <p>I am YH — outgoing, experimental, and drawn to problems that sit at the edge of what I already know. My core work is AI application development and system development: taking a messy real-world constraint and turning it into a pipeline, a product, or a tool someone else can run.</p>
+                    <p>Technically I am strongest where models meet product: computer vision and generative systems, API-backed assistants, and the surrounding web or desktop software that makes those models usable. I care about architecture that can be explained, interfaces that do not hide complexity from the user, and results that can be demonstrated — not just described.</p>
+                    <p>Long-term I want to design applied AI systems that are reliable in production: well-instrumented, maintainable, and useful to people who are not ML engineers. I am looking for roles where I can own features from research spike through deployment, and keep growing as both a builder and a technical communicator.</p>
                 </div>
+                <aside class="competency-panel" aria-label="Core technical competencies">
+                    <h3>Core competencies</h3>
+                    <div class="competency-group">
+                        <h4>Languages</h4>
+                        <ul class="chip-list">
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>C#</li>
+                            <li>Java</li>
+                            <li>HTML / CSS</li>
+                            <li>PHP</li>
+                        </ul>
+                    </div>
+                    <div class="competency-group">
+                        <h4>Frameworks &amp; libraries</h4>
+                        <ul class="chip-list">
+                            <li>PyTorch</li>
+                            <li>TensorFlow</li>
+                            <li>Stable Diffusion</li>
+                            <li>Unity</li>
+                            <li>LINE Messaging API</li>
+                        </ul>
+                    </div>
+                    <div class="competency-group">
+                        <h4>Developer tools</h4>
+                        <ul class="chip-list">
+                            <li>Git / GitHub</li>
+                            <li>Docker</li>
+                            <li>Linux Ubuntu</li>
+                            <li>MySQL</li>
+                            <li>Hugging Face</li>
+                        </ul>
+                    </div>
+                    <div class="competency-group">
+                        <h4>Core domains</h4>
+                        <ul class="chip-list">
+                            <li>Machine Learning</li>
+                            <li>Computer Vision</li>
+                            <li>Generative AI</li>
+                            <li>Full-stack web</li>
+                            <li>Interactive systems</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+            </div>
+        </section>
 
-                <div class="grid-item">
-                    <h3>專長 Skills</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>Machine Learning</li>
-                        <li>Pytorch</li>
-                        <li>Tensorflow</li>
-                        <li>Unity C#</li>
-                        <li>HTML CSS JavaScript</li>
-                        <li>Linux Ubuntu</li>
-                        <li>Git/GitHub</li>
-                        <li>Docker</li>
-                    </ul>
-                </div>
-                
-                
-                
-                <div class="grid-item">
-                    <h3>證照 Certificates</h3>
-                    <ul class="certificates">
+        <section id="projects" class="panel panel-projects" aria-labelledby="projects-title">
+            <div class="panel-fx" aria-hidden="true"></div>
+            <div class="wrap">
+            <div class="section-heading">
+                <p class="eyebrow">SYS.03 // Projects</p>
+                <h2 id="projects-title">Selected case studies</h2>
+                <p class="section-lede">Four shipped projects, written as technical case studies. Swap screenshots, metrics, and repository links in the markup comments.</p>
+            </div>
+
+            <div class="project-grid">
+                <!-- PROJECT 1: swap title, problem, role, stack, metrics, links, and screenshot -->
+                <article class="project-card" aria-labelledby="project-1-title">
+                    <div class="project-thumb" aria-hidden="true">
+                        <!-- SWAP: replace this placeholder with <img src="assets/projects/handwriting.png" alt=""> -->
+                        <span>CV · Generative</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-kicker">Feb 2024 – Dec 2024 · 11 months</p>
+                        <h3 id="project-1-title">Intelligent Handwriting Correction</h3>
+                        <p class="project-summary">Real-time analysis of student handwriting that suggests corrections while preserving the writer’s personal style.</p>
+                        <ul class="chip-list compact">
+                            <li>Python</li>
+                            <li>TensorFlow</li>
+                            <li>CNN</li>
+                            <li>cGAN / Pix2Pix</li>
+                        </ul>
+                        <button type="button" class="text-link" data-project="handwriting" aria-haspopup="dialog">Read case study</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 2 -->
+                <article class="project-card" aria-labelledby="project-2-title">
+                    <div class="project-thumb" aria-hidden="true">
+                        <span>Generative AI</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-kicker">Dec 2024 · 14 days</p>
+                        <h3 id="project-2-title">AI Image Generation Studio</h3>
+                        <p class="project-summary">A Stable Diffusion tool that produces high-quality concept art so design teams can iterate without waiting on a full illustration cycle.</p>
+                        <ul class="chip-list compact">
+                            <li>Python</li>
+                            <li>PyTorch</li>
+                            <li>Stable Diffusion</li>
+                            <li>Hugging Face</li>
+                        </ul>
+                        <div class="project-actions">
+                            <button type="button" class="text-link" data-project="imagen" aria-haspopup="dialog">Read case study</button>
+                            <a class="text-link" href="https://github.com/YHOneBox/AI-Application-project" target="_blank" rel="noopener noreferrer" aria-label="AI Image Generation Studio GitHub repository">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJECT 3 -->
+                <article class="project-card" aria-labelledby="project-3-title">
+                    <div class="project-thumb" aria-hidden="true">
+                        <span>Game systems</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-kicker">Feb 2024 – May 2025 · 15 months</p>
+                        <h3 id="project-3-title">Dawn of the Dragon</h3>
+                        <p class="project-summary">A 2D Unity RPG combining exploration, puzzles, combat, and narrative — built and tested end-to-end in C#.</p>
+                        <ul class="chip-list compact">
+                            <li>Unity</li>
+                            <li>C#</li>
+                        </ul>
+                        <button type="button" class="text-link" data-project="dragon" aria-haspopup="dialog">Read case study</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 4 -->
+                <article class="project-card" aria-labelledby="project-4-title">
+                    <div class="project-thumb" aria-hidden="true">
+                        <span>Full-stack · Health</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-kicker">May 2023 – Jun 2023 · 1 month</p>
+                        <h3 id="project-4-title">Cardiovascular Risk Prediction</h3>
+                        <p class="project-summary">A web application with registration, authentication, and a prediction workflow for cardiovascular risk screening.</p>
+                        <ul class="chip-list compact">
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>HTML / CSS</li>
+                        </ul>
+                        <div class="project-actions">
+                            <button type="button" class="text-link" data-project="cardio" aria-haspopup="dialog">Read case study</button>
+                            <a class="text-link" href="https://github.com/YHOneBox/WebProgram_Final" target="_blank" rel="noopener noreferrer" aria-label="Cardiovascular Risk Prediction GitHub repository">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            </div>
+        </section>
+
+        <section id="resume" class="panel panel-resume" aria-labelledby="resume-title">
+            <div class="panel-fx" aria-hidden="true"></div>
+            <div class="wrap">
+            <div class="section-heading">
+                <p class="eyebrow">SYS.04 // Resume</p>
+                <h2 id="resume-title">Education, experience, and proof</h2>
+                <p class="section-lede">In-browser summary. Download the PDF for the formatted version used in applications.</p>
+                <a class="btn btn-primary" href="assets/Yi-Ho-Chang-Resume.pdf" download>Download Resume (PDF)</a>
+            </div>
+
+            <div class="resume-layout">
+                <article class="resume-block" aria-labelledby="edu-title">
+                    <h3 id="edu-title">Education</h3>
+                    <ol class="timeline">
+                        <li>
+                            <h4>Oregon State University</h4>
+                            <p class="meta">MEng · Computer Science, AI minor</p>
+                            <!-- SWAP: add dates, GPA, or relevant coursework -->
+                        </li>
+                        <li>
+                            <h4>National Taichung University of Education</h4>
+                            <p class="meta">BS · Dual major in Information Engineering &amp; Digital Content Technology</p>
+                        </li>
+                    </ol>
+                </article>
+
+                <article class="resume-block" aria-labelledby="exp-title">
+                    <h3 id="exp-title">Experience &amp; selected work</h3>
+                    <ol class="timeline">
+                        <!-- SWAP: replace with internships / jobs when you have them -->
+                        <li>
+                            <h4>Applied AI systems builder</h4>
+                            <p class="meta">Independent &amp; academic projects · 2022 – present</p>
+                            <p>Designed and shipped ML, generative, and full-stack systems from problem framing through demo: vision models, diffusion tooling, conversational bots, and Unity products.</p>
+                        </li>
+                        <li>
+                            <h4>Graduation exhibition interactive installation</h4>
+                            <p class="meta">Unity · JavaScript · Python · Nov 2024 – May 2025</p>
+                            <p>Built backend and Unity logic for a visitor-facing exhibit with voting and live interaction.</p>
+                        </li>
+                    </ol>
+                </article>
+
+                <article class="resume-block" aria-labelledby="cert-title">
+                    <h3 id="cert-title">Certificates</h3>
+                    <ul class="link-list">
                         <li><a href="https://www.coursera.org/account/accomplishments/verify/5RTEXB33Q2HG" target="_blank" rel="noopener noreferrer">Generative AI with LLMs</a></li>
                         <li><a href="https://www.coursera.org/account/accomplishments/verify/TBFRIWA3XZ6O" target="_blank" rel="noopener noreferrer">Exploratory Data Analysis for ML</a></li>
                     </ul>
-                    <h3>外部連結 External Links</h3>                    <ul class="other_links">
-                        <li><a href="https://www.linkedin.com/in/yi-ho-chang-294817265/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                    </ul>
-                </div>
+                </article>
             </div>
-        </aside>        <main class="main-content">
-            <div class="starfield-hint">請點擊星球以查看專案</div>
-            <canvas id="starfield"></canvas>
-            <!-- 行星將通過 JavaScript 添加 -->
-        </main>
-    </div>
-    <script src="files/script.js"></script>
+            </div>
+        </section>
+
+        <section id="contact" class="panel panel-contact" aria-labelledby="contact-title">
+            <div class="panel-fx" aria-hidden="true"></div>
+            <div class="wrap">
+            <div class="section-heading">
+                <p class="eyebrow">SYS.05 // Contact</p>
+                <h2 id="contact-title">Let’s build something useful</h2>
+                <p class="section-lede">Email or message me. I read every note about roles, collaborations, and interesting technical problems.</p>
+            </div>
+
+            <div class="contact-grid">
+                <ul class="contact-channels">
+                    <!-- SWAP: replace mailto with your real email -->
+                    <li>
+                        <a class="contact-card" href="mailto:onebox663269@gmail.com" aria-label="Email Yi-Ho Chang">
+                            <span class="contact-label">Email</span>
+                            <span>onebox663269@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-card" href="https://www.linkedin.com/in/yi-ho-chang-294817265/" target="_blank" rel="noopener noreferrer" aria-label="Yi-Ho Chang on LinkedIn">
+                            <span class="contact-label">LinkedIn</span>
+                            <span>yi-ho-chang</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-card" href="https://github.com/YHOneBox" target="_blank" rel="noopener noreferrer" aria-label="YHOneBox on GitHub">
+                            <span class="contact-label">GitHub</span>
+                            <span>YHOneBox</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <form id="contact-form" class="contact-form" action="mailto:onebox663269@gmail.com" method="post" enctype="text/plain">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send message</button>
+                    <p class="form-note">Opens your email client. For GitHub Pages there is no server-side mailer — swap this form to Formspree if you want inbox delivery without mailto.</p>
+                </form>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="panel-fx" aria-hidden="true"></div>
+        <p>&copy; <span id="year"></span> Yi-Ho Chang. Built for the web, hosted on GitHub Pages.</p>
+    </footer>
+
+    <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title">
+        <div class="dialog-inner">
+            <button type="button" class="icon-btn dialog-close" data-close-dialog aria-label="Close case study">&times;</button>
+            <p id="dialog-kicker" class="project-kicker"></p>
+            <h2 id="dialog-title"></h2>
+            <div id="dialog-body" class="dialog-body"></div>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
 </body>
 </html>
