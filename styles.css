@@ -755,7 +755,13 @@ html[data-theme="light"] .panel-hero .panel-fx {
     font-family: var(--mono);
 }
 
-.link-list { margin: 0; padding-left: 1.1rem; overflow-wrap: anywhere; }
+.link-list .meta {
+    display: inline-block;
+    margin-top: 0.2rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-family: var(--mono);
+}
 
 .contact-channels {
     list-style: none;

@@ -14,63 +14,68 @@ const I18N = {
         themeToDark: "Switch to dark mode",
         openMenu: "Open navigation menu",
         closeMenu: "Close navigation menu",
-        heroEyebrow: "AI Engineer · Portfolio",
-        heroStatus: "Applied ML · Systems · Product",
+        heroEyebrow: "AI Engineer · CTO Advisor",
+        heroStatus: "ML · LLM · Computer Vision",
         heroName: "Yi-Ho Chang",
-        tagline: "I build practical AI products that stay usable in the real world — from model pipelines to the interfaces people actually click.",
-        valueProp: "MEng Computer Science at Oregon State University. I ship end-to-end systems across machine learning, web platforms, and interactive software, with a bias toward clear architecture and measurable outcomes.",
+        tagline: "I train and ship ML/DL systems that run in the real world — from real-time computer vision and LLMs to containerized apps on edge devices.",
+        valueProp: "MEng Computer Science (AI minor) at Oregon State University. Co-founder and CTO Advisor at E-Ranyx, where I define how AI lands in production platforms and take models from research through deployment.",
         ctaProjects: "View Projects",
         ctaResume: "Download Resume",
         ctaContact: "Contact Me",
         aboutEyebrow: "About",
         aboutTitle: "Engineering with curiosity, then shipping it",
-        aboutP1: "I am YH — outgoing, experimental, and drawn to problems that sit at the edge of what I already know. My core work is AI application development and system development: taking a messy real-world constraint and turning it into a pipeline, a product, or a tool someone else can run.",
-        aboutP2: "Technically I am strongest where models meet product: computer vision and generative systems, API-backed assistants, and the surrounding web or desktop software that makes those models usable. I care about architecture that can be explained, interfaces that do not hide complexity from the user, and results that can be demonstrated — not just described.",
-        aboutP3: "Long-term I want to design applied AI systems that are reliable in production: well-instrumented, maintainable, and useful to people who are not ML engineers. I am looking for roles where I can own features from research spike through deployment, and keep growing as both a builder and a technical communicator.",
+        aboutP1: "I am an AI engineer and Computer Science master’s student at Oregon State University, focused on machine learning, computer vision, LLMs, and systems that have to run outside the lab — including remote and edge deployments.",
+        aboutP2: "As co-founder and CTO Advisor at E-Ranyx, I decide how AI is implemented in the company’s platforms and guide teams from research through shipping. My strongest work sits where models meet product: real-time vision (CNN, YOLO), generative and LLM systems (including RAG), and the Dockerized software around them.",
+        aboutP3: "I care about architecture that can be explained, interfaces that do not hide complexity, and results that can be measured — 93% weed-detection accuracy, 90% LLM response-accuracy lift, 80% faster client processing. I want roles where I own features from spike to production.",
         portraitAlt: "Portrait of Yi-Ho Chang",
         skillsAria: "Core technical competencies",
         skillsTitle: "Core competencies",
         skillsLang: "Languages",
-        skillsFw: "Frameworks & libraries",
-        skillsTools: "Developer tools",
+        skillsFw: "AI / ML",
+        skillsTools: "Deployment",
         skillsDomains: "Core domains",
         projectsEyebrow: "Projects",
         projectsTitle: "Selected case studies",
-        projectsLede: "Four shipped projects. Open a card to read the full case study.",
+        projectsLede: "Four AI projects: multimodal systems, computer vision, and production platforms. Open a card for the case study.",
         readCase: "Read case study",
-        p1Kicker: "Feb 2024 – Dec 2024 · 11 months",
-        p1Title: "Intelligent Handwriting Correction",
-        p1Summary: "Real-time analysis of student handwriting that suggests corrections while preserving the writer’s personal style.",
-        p2Kicker: "Dec 2024 · 14 days",
-        p2Title: "AI Image Generation Studio",
-        p2Summary: "A Stable Diffusion tool that produces high-quality concept art so design teams can iterate without waiting on a full illustration cycle.",
-        p2GithubAria: "AI Image Generation Studio GitHub repository",
-        p3Thumb: "Game systems",
-        p3Kicker: "Feb 2024 – May 2025 · 15 months",
-        p3Title: "Dawn of the Dragon",
-        p3Summary: "A 2D Unity RPG combining exploration, puzzles, combat, and narrative — built and tested end-to-end in C#.",
-        p4Kicker: "May 2023 – Jun 2023 · 1 month",
-        p4Title: "Cardiovascular Risk Prediction",
-        p4Summary: "A web application with registration, authentication, and a prediction workflow for cardiovascular risk screening.",
-        p4GithubAria: "Cardiovascular Risk Prediction GitHub repository",
+        p1Kicker: "Jun 2026 – Present",
+        p1Title: "Interactive AI Avatar",
+        p1Summary: "A multimodal AI system for real-time interaction with a hyperrealistic avatar — from UI through APIs to low-latency architecture.",
+        p2Kicker: "May 2026 – Present",
+        p2Title: "Custom LINE Ecosystem",
+        p2Summary: "A scalable LINE-centered platform that connects AI services to startup operations on the messaging layer people already use.",
+        p3Kicker: "Jan 2026 – Mar 2026",
+        p3Title: "Drone-Based Agricultural Weed Detection",
+        p3Summary: "Real-time weed detection from drone imagery using YOLO, with resolution experiments that reached 93% detection accuracy.",
+        p4Kicker: "Jan 2024 – Dec 2024",
+        p4Title: "Chinese Handwriting Rectification",
+        p4Summary: "CNN and cGAN/PatchGAN analysis of student handwriting that suggests corrections while preserving personal writing style.",
         resumeEyebrow: "Resume",
         resumeTitle: "Education, experience, and proof",
         resumeLede: "In-browser summary. Download the PDF for the formatted version used in applications.",
         ctaResumePdf: "Download Resume (PDF)",
         eduTitle: "Education",
-        edu1Meta: "MEng · Computer Science, AI minor",
-        edu1Dates: "Sep 2025 – Dec 2026",
+        edu1Meta: "MEng · Computer Science, AI minor · GPA 3.76",
+        edu1Dates: "Sep 2025 – Dec 2026 · Advanced AI, Computer Vision, Machine Learning",
         edu2Name: "National Taichung University of Education",
-        edu2Meta: "BS · Dual major in Information Engineering & Digital Content Technology",
+        edu2Meta: "BS · Dual major in Digital Content Technology & Computer Science · GPA 3.96",
         edu2Dates: "Sep 2021 – Jun 2025",
-        expTitle: "Experience & selected work",
-        exp1Title: "Applied AI systems builder",
-        exp1Meta: "Independent & academic projects · 2022 – present",
-        exp1Body: "Designed and shipped ML, generative, and full-stack systems from problem framing through demo: vision models, diffusion tooling, conversational bots, and Unity products.",
-        exp2Title: "Graduation exhibition interactive installation",
-        exp2Meta: "Unity · JavaScript · Python · Nov 2024 – May 2025",
-        exp2Body: "Built backend and Unity logic for a visitor-facing exhibit with voting and live interaction.",
+        expTitle: "Experience",
+        exp1Title: "Co-Founder & CTO Advisor · E-Ranyx",
+        exp1Meta: "Sep 2025 – Present",
+        exp1Body: "Lead technical direction for AI-driven software: LLMs and computer vision in client platforms. Delivered a major corporate integration that cut processing time 80% and cost 50%.",
+        exp2Title: "AI Engineer · DHT Solution",
+        exp2Meta: "Part-time · Sep 2024 – Jul 2025",
+        exp2Body: "Built and deployed ML systems; benchmarked LLM apps on a 10,000+ example dataset and improved response accuracy by 90%.",
+        exp3Title: "AI Intern · Claireye Intelligence",
+        exp3Meta: "Jul 2024 – Aug 2024 · CNN, YOLO",
+        exp3Body: "Computer vision and LLM product work: image recognition, web/app UI with RD, and frontend stability from customer feedback.",
+        exp4Title: "AI Edge Course · ITRI",
+        exp4Meta: "Jul 2024 – Aug 2024 · NVIDIA Jetson",
+        exp4Body: "Designed and taught edge-AI courses for industry engineers: Linux, DeepStream SDK, Docker, and Azure IoT Edge on Jetson.",
         certTitle: "Certificates",
+        cert1Meta: "DeepLearning.AI · AWS · Feb 2025",
+        cert2Meta: "IBM · Jan 2025",
         contactEyebrow: "Contact",
         contactTitle: "Let’s build something useful",
         contactLede: "Email or message me. I read every note about roles, collaborations, and interesting technical problems.",
@@ -110,63 +115,68 @@ const I18N = {
         themeToDark: "切換為深色模式",
         openMenu: "開啟選單",
         closeMenu: "關閉選單",
-        heroEyebrow: "AI 工程師 · 作品集",
-        heroStatus: "應用機器學習 · 系統 · 產品",
+        heroEyebrow: "AI 工程師 · CTO Advisor",
+        heroStatus: "機器學習 · LLM · 電腦視覺",
         heroName: "張翊禾",
-        tagline: "我做能在真實世界裡用得下去的 AI 產品——從模型管線，做到人們真的會點的介面。",
-        valueProp: "Oregon State University 電腦科學碩士生。我端到端交付機器學習、網頁平台與互動軟體，重視能說清楚的架構與可驗證的結果。",
+        tagline: "我訓練並交付能在真實環境跑的 ML/DL 系統——從即時電腦視覺、LLM，到在邊緣裝置上以容器部署的應用。",
+        valueProp: "Oregon State University 電腦科學碩士（AI 輔系）。E-Ranyx 共同創辦人暨 CTO Advisor，負責把 AI 做到公司平台裡，並帶領團隊從研究走到上線。",
         ctaProjects: "查看專案",
         ctaResume: "下載履歷",
         ctaContact: "與我聯絡",
         aboutEyebrow: "關於",
         aboutTitle: "帶著好奇心工程，再把它做出來",
-        aboutP1: "我是 YH——外向、愛實驗，也常被自己還沒掌握的問題吸引。核心工作是 AI 應用與系統開發：把混亂的真實限制，收成一條管線、一個產品，或別人也能跑的工具。",
-        aboutP2: "技術上我最熟的是模型與產品交會處：電腦視覺與生成式系統、API 助理，以及讓這些模型真正可用的網頁或桌面軟體。我在意能解釋的架構、不把複雜藏起來的介面，以及可以演示、而不只是描述的結果。",
-        aboutP3: "長期目標是設計在生產環境可靠的應用 AI：可觀測、可維護，且對非 ML 工程師也有用。我希望能從研究試作一路擁有到上線，同時成為更好的建構者與技術溝通者。",
+        aboutP1: "我是 Oregon State University 電腦科學碩士生與 AI 工程師，專注機器學習、電腦視覺、LLM，以及必須在實驗室之外運作的系統——包含遠端與邊緣部署。",
+        aboutP2: "作為 E-Ranyx 共同創辦人與 CTO Advisor，我決定 AI 如何進入公司平台，並帶領團隊從研究做到交付。我最熟的是模型與產品交會處：即時視覺（CNN、YOLO）、生成式與 LLM（含 RAG），以及外圍的 Docker 化軟體。",
+        aboutP3: "我在意能解釋的架構、不把複雜藏起來的介面，以及量得出來的結果——雜草偵測準確率 93%、LLM 回覆準確率提升 90%、客戶處理時間加快 80%。我希望能從試作一路擁有到上線。",
         portraitAlt: "張翊禾的肖像",
         skillsAria: "核心技術能力",
         skillsTitle: "核心能力",
         skillsLang: "語言",
-        skillsFw: "框架與函式庫",
-        skillsTools: "開發工具",
+        skillsFw: "AI / ML",
+        skillsTools: "部署",
         skillsDomains: "核心領域",
         projectsEyebrow: "專案",
         projectsTitle: "精選案例",
-        projectsLede: "四件已完成的專案。點開卡片即可閱讀完整案例。",
+        projectsLede: "四件 AI 專案：多模態系統、電腦視覺與生產平台。點開卡片閱讀案例。",
         readCase: "閱讀案例",
-        p1Kicker: "2024/2 – 2024/12 · 11 個月",
-        p1Title: "字跡智慧矯正系統",
-        p1Summary: "即時分析學生字跡並提供矯正建議，同時保留個人書寫風格。",
-        p2Kicker: "2024/12 · 14 天",
-        p2Title: "AI 生圖工作室",
-        p2Summary: "以 Stable Diffusion 產出高品質概念圖，讓設計團隊不必等完整繪製週期就能迭代。",
-        p2GithubAria: "AI 生圖工作室 GitHub 儲存庫",
-        p3Thumb: "遊戲系統",
-        p3Kicker: "2024/2 – 2025/5 · 15 個月",
-        p3Title: "龍之曙光",
-        p3Summary: "結合探索、解謎、戰鬥與敘事的 2D Unity RPG，以 C# 端到端開發與測試。",
-        p4Kicker: "2023/5 – 2023/6 · 1 個月",
-        p4Title: "心血管疾病風險預測",
-        p4Summary: "含註冊、登入與預測流程的心血管風險篩檢網站。",
-        p4GithubAria: "心血管疾病風險預測 GitHub 儲存庫",
+        p1Kicker: "2026/6 – 至今",
+        p1Title: "Interactive AI Avatar",
+        p1Summary: "多模態 AI 系統，支援與超寫實虛擬人即時互動——從 UI、API 整合到低延遲架構。",
+        p2Kicker: "2026/5 – 至今",
+        p2Title: "Custom LINE Ecosystem",
+        p2Summary: "以 LINE 為核心的可擴充平台，把 AI 服務接到新創已在使用的通訊層與營運流程。",
+        p3Kicker: "2026/1 – 2026/3",
+        p3Title: "無人機農業雜草偵測",
+        p3Summary: "以無人機影像與 YOLO 做即時雜草偵測，並比較解析度與訓練設定，最終達到 93% 偵測準確率。",
+        p4Kicker: "2024/1 – 2024/12",
+        p4Title: "中文字跡矯正系統",
+        p4Summary: "以 CNN 與 cGAN/PatchGAN 分析學生字跡並提出矯正，同時保留個人書寫風格。",
         resumeEyebrow: "履歷",
         resumeTitle: "學歷、經歷與證明",
         resumeLede: "網頁摘要。申請時請下載 PDF 格式版本。",
         ctaResumePdf: "下載履歷（PDF）",
         eduTitle: "學歷",
-        edu1Meta: "碩士 · 電腦科學，AI 輔系",
-        edu1Dates: "2025/9 – 2026/12",
+        edu1Meta: "碩士 · 電腦科學，AI 輔系 · GPA 3.76",
+        edu1Dates: "2025/9 – 2026/12 · Advanced AI、Computer Vision、Machine Learning",
         edu2Name: "國立臺中教育大學",
-        edu2Meta: "學士 · 資訊工程與數位內容科技雙主修",
+        edu2Meta: "學士 · 數位內容科技與資訊工程雙主修 · GPA 3.96",
         edu2Dates: "2021/9 – 2025/6",
-        expTitle: "經歷與精選工作",
-        exp1Title: "應用 AI 系統建構",
-        exp1Meta: "獨立與學術專案 · 2022 – 至今",
-        exp1Body: "從問題定義做到演示，交付機器學習、生成式與全端系統：視覺模型、擴散工具、對話機器人與 Unity 產品。",
-        exp2Title: "畢業展互動裝置",
-        exp2Meta: "Unity · JavaScript · Python · 2024/11 – 2025/5",
-        exp2Body: "為面向參觀者的展覽建置後端與 Unity 邏輯，含投票與即時互動。",
+        expTitle: "經歷",
+        exp1Title: "共同創辦人暨 CTO Advisor · E-Ranyx",
+        exp1Meta: "2025/9 – 至今",
+        exp1Body: "主導 AI 軟體技術方向：將 LLM 與電腦視覺導入客戶平台。完成大型企業整合，處理時間減少 80%、成本減少 50%。",
+        exp2Title: "AI 工程師 · DHT Solution",
+        exp2Meta: "兼職 · 2024/9 – 2025/7",
+        exp2Body: "建置並部署機器學習系統；以超過 10,000 筆資料基準測試 LLM 應用，回覆準確率提升 90%。",
+        exp3Title: "AI 實習生 · Claireye Intelligence",
+        exp3Meta: "2024/7 – 2024/8 · CNN、YOLO",
+        exp3Body: "電腦視覺與 LLM 產品：影像辨識、與 RD 協作網頁／App 介面，並依客戶回饋優化前端穩定度。",
+        exp4Title: "AI 邊緣課程 · 工研院",
+        exp4Meta: "2024/7 – 2024/8 · NVIDIA Jetson",
+        exp4Body: "為產業工程師設計並授課：Linux、DeepStream SDK、Docker 與 Azure IoT Edge 於 Jetson 平台。",
         certTitle: "證照",
+        cert1Meta: "DeepLearning.AI · AWS · 2025/2",
+        cert2Meta: "IBM · 2025/1",
         contactEyebrow: "聯絡",
         contactTitle: "一起做有用的東西",
         contactLede: "歡迎用信件或訊息找我。職缺、合作與有意思的技術問題，我都會看。",
@@ -194,82 +204,74 @@ const I18N = {
 };
 
 const PROJECTS = {
-    handwriting: {
+    avatar: {
         kickerKey: "p1Kicker",
         titleKey: "p1Title",
         context: {
-            en: "Students needed handwriting feedback that improved legibility without flattening personal writing style. Generic OCR or font-matching tools treated style as noise instead of a constraint.",
-            zh: "學生需要能提升易讀性、又不抹平個人風格的字跡回饋。一般 OCR 或字型比對會把風格當雜訊，而不是限制條件。"
+            en: "Teams needed a way for people to talk to a hyperrealistic AI avatar in real time, not a delayed chatbot. Latency, multimodal input, and a usable UI all had to hold together at once.",
+            zh: "團隊需要能與超寫實 AI 虛擬人即時對話，而不是延遲的聊天機器人。延遲、多模態輸入與可用 UI 必須同時成立。"
         },
         role: {
-            en: "Designed the learning setup around standard Chinese glyphs in multiple writing styles. Built CNN classification plus a Pix2Pix / cGAN correction path so the system could evaluate a sample and propose a corrected glyph in near real time.",
-            zh: "以多種書寫風格的標準中文字形設計學習設定。建立 CNN 分類與 Pix2Pix / cGAN 矯正路徑，讓系統能近即時評估樣本並提出矯正字形。"
+            en: "Architecting the multimodal stack end to end: UI, multiple complex API integrations, and continuous tuning so large-scale traffic still gets low-latency responses.",
+            zh: "端到端架構多模態系統：UI、多個複雜 API 整合，以及持續調校，讓大規模流量仍能低延遲回應。"
         },
-        stack: "Python, TensorFlow, CNN, cGAN, Pix2Pix.",
+        stack: "LLM, multimodal AI, realtime APIs.",
         impact: {
-            en: "Delivered a working pipeline for font discrimination, live assessment, and style-preserving correction over an 11-month build. Demo walkthrough is available on video.",
-            zh: "歷時 11 個月交付可運作管線：字體分辨、即時評估與保留風格的矯正。演示影片可線上觀看。"
-        },
-        demo: "https://www.youtube-nocookie.com/embed/Q9f0xyXfUW4",
-        demoKey: "watchDemo"
+            en: "A production-oriented avatar pipeline that treats interaction as a systems problem — model quality plus the product path people actually use.",
+            zh: "以產品為導向的虛擬人管線：把互動當成系統問題——模型品質，加上人們真正會用的產品路徑。"
+        }
     },
-    imagen: {
+    line: {
         kickerKey: "p2Kicker",
         titleKey: "p2Title",
         context: {
-            en: "Concept-art iteration was too slow for design exploration. The team needed a local, style-flexible generator rather than a black-box website.",
-            zh: "概念美術迭代對探索來說太慢。團隊需要本地、風格可調的生成器，而不是黑盒子網站。"
+            en: "Core startup operations needed to live where users already communicate. LINE is the default messaging layer in the target market, so AI had to plug into that ecosystem rather than a greenfield app.",
+            zh: "新創核心營運需要長在使用者已經在用的通訊層上。目標市場以 LINE 為預設訊息平台，AI 必須接入該生態，而不是另做一套 App。"
         },
         role: {
-            en: "Stood up a Stable Diffusion workflow with a simple preview UI, style options, and Hugging Face model integration so non-ML teammates could produce usable stills quickly.",
-            zh: "建置 Stable Diffusion 流程，含預覽介面、風格選項與 Hugging Face 模型整合，讓非 ML 同事也能快速產出可用靜態圖。"
+            en: "Designed a robust, scalable LINE platform for messaging and workflows, and wired AI services into the same operations surface.",
+            zh: "設計可擴充的 LINE 訊息與工作流平台，並把 AI 服務接到同一套營運介面。"
         },
-        stack: "Python, PyTorch, Stable Diffusion, Hugging Face.",
+        stack: "LINE Messaging API, platform architecture, AI integration.",
         impact: {
-            en: "Shipped in 14 days with high-quality still generation, multiple styles, and a low-friction operator interface.",
-            zh: "14 天內上線：高品質靜態圖、多風格，以及低門檻操作介面。"
-        },
-        github: "https://github.com/YHOneBox/AI-Application-project",
-        demo: "https://www.youtube-nocookie.com/embed/A0r_gUpiiYs",
-        demoKey: "watchDemo"
+            en: "A LINE-centered ecosystem that can carry company operations at scale instead of a one-off bot demo.",
+            zh: "以 LINE 為中心的生態系，能承載公司營運規模，而不是一次性機器人演示。"
+        }
     },
-    dragon: {
+    weed: {
         kickerKey: "p3Kicker",
         titleKey: "p3Title",
         context: {
-            en: "Needed a complete 2D game loop — exploration, puzzles, combat, and story — that could be demoed as a coherent product rather than disconnected prototypes.",
-            zh: "需要完整的 2D 遊戲迴圈——探索、解謎、戰鬥與故事——能作為連貫產品演示，而不是互不相連的原型。"
+            en: "Agricultural teams needed real-time weed spotting from drone imagery, not offline batch labeling. Accuracy had to stay high across image resolutions.",
+            zh: "農業團隊需要從無人機影像即時找出雜草，而不是離線批次標註。不同影像解析度下準確率都必須維持。"
         },
         role: {
-            en: "Owned all Unity C# development: world traversal, combat, puzzle logic, narrative progression, and playtest fixes across a 15-month cycle.",
-            zh: "負責全部 Unity C# 開發：地圖移動、戰鬥、解謎邏輯、敘事推進，以及 15 個月週期中的遊玩測試修正。"
+            en: "Built a YOLO-based detector, ran separate and joint training, compared resolution effects, and tightened the test loop.",
+            zh: "建置 YOLO 偵測器，進行分開與聯合訓練、比較解析度影響，並收斂測試流程。"
         },
-        stack: "Unity, C#.",
+        stack: "YOLO, computer vision, Python.",
         impact: {
-            en: "Delivered a playable RPG with exploration, combat, puzzles, and story beats, documented through a public gameplay video.",
-            zh: "交付可遊玩的 RPG，含探索、戰鬥、解謎與故事節拍，並以公開遊玩影片記錄。"
-        },
-        demo: "https://www.youtube.com/embed/2PWibz-tJFM",
-        demoKey: "watchPlay"
+            en: "Reached 93% detection accuracy after the resolution and training experiments.",
+            zh: "在解析度與訓練實驗後達到 93% 偵測準確率。"
+        }
     },
-    cardio: {
+    handwriting: {
         kickerKey: "p4Kicker",
         titleKey: "p4Title",
         context: {
-            en: "Users needed a simple way to register, store health-related inputs, and see a cardiovascular risk estimate without a native app.",
-            zh: "使用者需要簡單的註冊、儲存健康相關輸入，並在沒有原生 App 的情況下看到心血管風險估計。"
+            en: "Students needed handwriting feedback that improved structure and stroke shape without erasing personal style. Generic OCR treated style as noise.",
+            zh: "學生需要能改善結構與筆畫、又不抹平個人風格的字跡回饋。一般 OCR 會把風格當雜訊。"
         },
         role: {
-            en: "Implemented front-end flows, PHP/MySQL persistence, authentication, and the prediction display end to end.",
-            zh: "端到端實作前端流程、PHP/MySQL 儲存、驗證與預測結果呈現。"
+            en: "Trained CNN plus conditional GAN / PatchGAN on large sets of Chinese characters so the system could evaluate a sample and overlay correction lines and suggestions on screen.",
+            zh: "以大量中文字訓練 CNN 與 conditional GAN / PatchGAN，讓系統能評估樣本，並在螢幕上疊加矯正線與建議。"
         },
-        stack: "JavaScript, HTML, CSS, PHP, MySQL.",
+        stack: "Python, CNN, cGAN, PatchGAN.",
         impact: {
-            en: "Shipped a working web app with registration, login, data management, and risk output in a one-month academic sprint.",
-            zh: "在一個月的課程衝刺中交付可運作網站：註冊、登入、資料管理與風險輸出。"
+            en: "A year-long pipeline for style-preserving correction: unbalanced structure and incorrect stroke shapes are flagged without forcing a single font.",
+            zh: "歷時一年的保留風格矯正管線：標出結構失衡與錯誤筆畫，而不強迫單一字型。"
         },
-        github: "https://github.com/YHOneBox/WebProgram_Final",
-        demo: "https://www.youtube-nocookie.com/embed/UtwxLswCfac",
+        demo: "https://www.youtube-nocookie.com/embed/Q9f0xyXfUW4",
         demoKey: "watchDemo"
     }
 };
@@ -290,8 +292,8 @@ function applyI18n() {
     const desc = document.querySelector('meta[name="description"]');
     if (desc) {
         desc.setAttribute("content", lang === "zh"
-            ? "張翊禾（YH）— AI 工程師作品集，涵蓋應用機器學習、全端系統與互動產品。"
-            : "Yi-Ho Chang (YH) — AI engineer portfolio covering applied machine learning, full-stack systems, and interactive product work.");
+            ? "張翊禾（YH）— AI 工程師作品集：機器學習、LLM、電腦視覺與邊緣部署。"
+            : "Yi-Ho Chang (YH) — AI engineer: machine learning, LLMs, computer vision, and edge deployment.");
     }
 
     document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -522,7 +524,7 @@ function setupContactForm() {
         status.classList.remove("is-error");
         const subject = encodeURIComponent(`Portfolio message from ${name}`);
         const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
-        window.location.href = `mailto:onebox663269@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:chanyiho@oregonstate.edu?subject=${subject}&body=${body}`;
         status.textContent = t("formOpened");
     });
 }
