@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Yi-Ho Chang (YH) — AI engineer: machine learning, LLMs, computer vision, and edge deployment.">
     <meta name="theme-color" content="#0b0d12">
     <title>Yi-Ho Chang — AI Engineer</title>
@@ -21,7 +21,8 @@
             document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
         })();
     </script>
-    <link rel="icon" href="files/profile.png" type="image/png">
+    <link rel="icon" href="files/favicon.svg?v=2" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="files/favicon.svg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -30,23 +31,14 @@
 <body>
     <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
 
-    <div id="update-notice" class="update-notice" role="status">
-        <p class="update-notice-text" data-i18n="notice">This site is still being updated and is not yet finished.</p>
-        <button type="button" id="update-notice-close" class="update-notice-close" data-i18n-aria="closeNotice" aria-label="Dismiss update notice">&times;</button>
-    </div>
-
     <header class="site-header">
         <div class="header-inner">
-            <a class="logo" href="#home" data-i18n-aria="logoAria" aria-label="Yi-Ho Chang, back to top">YH</a>
-
-            <nav id="site-nav" class="site-nav" data-i18n-aria="navAria" aria-label="Primary">
-                <ul class="nav-list">
-                    <li><a href="#about" data-i18n="navAbout">About</a></li>
-                    <li><a href="#projects" data-i18n="navProjects">Projects</a></li>
-                    <li><a href="#resume" data-i18n="navResume">Resume</a></li>
-                    <li><a href="#contact" data-i18n="navContact">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="header-start">
+                <button type="button" id="menu-toggle" class="icon-btn menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav">
+                    <span class="hamburger" aria-hidden="true"></span>
+                </button>
+                <a class="logo" href="#home" data-i18n-aria="logoAria" aria-label="Yi-Ho Chang, back to top">YH</a>
+            </div>
 
             <div class="header-actions">
                 <div class="lang-switch" role="group" data-i18n-aria="langGroup" aria-label="Language">
@@ -66,23 +58,43 @@
                         </svg>
                     </span>
                 </button>
-                <button type="button" id="menu-toggle" class="icon-btn menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav">
-                    <span class="hamburger" aria-hidden="true"></span>
-                </button>
             </div>
         </div>
     </header>
 
+    <nav id="site-nav" class="site-nav" data-i18n-aria="navAria" aria-label="Primary">
+        <p class="nav-current" aria-live="polite">
+            <span class="nav-current-kicker" data-i18n="navNow">Now</span>
+            <span id="nav-current-name">Home</span>
+        </p>
+        <ul class="nav-list">
+            <li><a href="#home"><span class="nav-index" aria-hidden="true">01</span><span data-i18n="navHome">Home</span></a></li>
+            <li><a href="#about"><span class="nav-index" aria-hidden="true">02</span><span data-i18n="navAbout">About</span></a></li>
+            <li><a href="#experience"><span class="nav-index" aria-hidden="true">03</span><span data-i18n="navExperience">Experience</span></a></li>
+            <li><a href="#projects"><span class="nav-index" aria-hidden="true">04</span><span data-i18n="navProjects">Projects</span></a></li>
+            <li><a href="#education"><span class="nav-index" aria-hidden="true">05</span><span data-i18n="navEducation">Education</span></a></li>
+            <li><a href="#certificates"><span class="nav-index" aria-hidden="true">06</span><span data-i18n="navCertificates">Certificates</span></a></li>
+            <li><a href="#contact"><span class="nav-index" aria-hidden="true">07</span><span data-i18n="navContact">Contact</span></a></li>
+        </ul>
+    </nav>
+    <div id="nav-backdrop" class="nav-backdrop" hidden></div>
+    <canvas id="fx-canvas" class="fx-canvas" aria-hidden="true"></canvas>
+
     <main id="main">
         <section id="home" class="panel panel-hero" aria-labelledby="hero-title">
-            <div class="panel-fx" aria-hidden="true"></div>
+            <div class="panel-fx" aria-hidden="true">
+                <span class="fx-orbs"></span>
+                <span class="fx-particles"></span>
+                <span class="fx-beam"></span>
+                <span class="fx-geo"></span>
+            </div>
             <div class="wrap hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow" data-i18n="heroEyebrow">AI Engineer · CTO Advisor</p>
+                    <p class="eyebrow" data-i18n="heroEyebrow">AI Engineer</p>
                     <p class="status-line"><span class="pulse" aria-hidden="true"></span> <span data-i18n="heroStatus">ML · LLM · Computer Vision</span></p>
                     <h1 id="hero-title" data-i18n="heroName">Yi-Ho Chang</h1>
                     <p class="tagline" data-i18n="tagline">I train and ship ML/DL systems that run in the real world — from real-time computer vision and LLMs to containerized apps on edge devices.</p>
-                    <p class="value-prop" data-i18n="valueProp">MEng Computer Science (AI minor) at Oregon State University. Co-founder and CTO Advisor at E-Ranyx, where I define how AI lands in production platforms and take models from research through deployment.</p>
+                    <p class="value-prop" data-i18n="valueProp">MEng Computer Science (AI minor) at Oregon State University. AI Engineer at E-Ranyx, where I define how AI lands in production platforms and take models from research through deployment.</p>
                     <div class="hero-ctas">
                         <a class="btn btn-primary" href="#projects" data-i18n="ctaProjects">View Projects</a>
                         <a class="btn btn-secondary" href="Resume_YiHoChang.pdf" download="Resume_YiHoChang.pdf" data-i18n="ctaResume">Download Resume</a>
@@ -102,7 +114,12 @@
         </section>
 
         <section id="about" class="panel panel-about" aria-labelledby="about-title">
-            <div class="panel-fx" aria-hidden="true"></div>
+            <div class="panel-fx" aria-hidden="true">
+                <span class="fx-orbs"></span>
+                <span class="fx-particles"></span>
+                <span class="fx-beam"></span>
+                <span class="fx-geo"></span>
+            </div>
             <div class="wrap">
             <div class="section-heading">
                 <p class="eyebrow" data-i18n="aboutEyebrow">About</p>
@@ -111,7 +128,7 @@
             <div class="about-grid">
                 <div class="about-copy">
                     <p data-i18n="aboutP1">I am an AI engineer and Computer Science master’s student at Oregon State University, focused on machine learning, computer vision, LLMs, and systems that have to run outside the lab — including remote and edge deployments.</p>
-                    <p data-i18n="aboutP2">As co-founder and CTO Advisor at E-Ranyx, I decide how AI is implemented in the company’s platforms and guide teams from research through shipping. My strongest work sits where models meet product: real-time vision (CNN, YOLO), generative and LLM systems (including RAG), and the Dockerized software around them.</p>
+                    <p data-i18n="aboutP2">As an AI Engineer at E-Ranyx, I decide how AI is implemented in the company’s platforms and guide teams from research through shipping. My strongest work sits where models meet product: real-time vision (CNN, YOLO), generative and LLM systems (including RAG), and the Dockerized software around them.</p>
                     <p data-i18n="aboutP3">I care about architecture that can be explained, interfaces that do not hide complexity, and results that can be measured — 93% weed-detection accuracy, 90% LLM response-accuracy lift, 80% faster client processing. I want roles where I own features from spike to production.</p>
                 </div>
                 <aside class="competency-panel" data-i18n-aria="skillsAria" aria-label="Core technical competencies">
@@ -163,8 +180,54 @@
             </div>
         </section>
 
+        <section id="experience" class="panel panel-experience" aria-labelledby="exp-title">
+            <div class="panel-fx" aria-hidden="true">
+                <span class="fx-orbs"></span>
+                <span class="fx-particles"></span>
+                <span class="fx-beam"></span>
+                <span class="fx-geo"></span>
+            </div>
+            <div class="wrap">
+            <div class="section-heading">
+                <p class="eyebrow" data-i18n="expEyebrow">Experience</p>
+                <h2 id="exp-title" data-i18n="expTitle">Professional experience</h2>
+                <p class="section-lede" data-i18n="expLede">Product-facing AI work across startups, internships, and industry training. Download the PDF for the formatted version used in applications.</p>
+                <a class="btn btn-primary" href="Resume_YiHoChang.pdf" download="Resume_YiHoChang.pdf" data-i18n="ctaResumePdf">Download Resume (PDF)</a>
+            </div>
+            <article class="resume-block">
+                <ol class="timeline">
+                    <li>
+                        <h4 data-i18n="exp1Title">AI Engineer · E-Ranyx</h4>
+                        <p class="meta" data-i18n="exp1Meta">Sep 2025 – Present</p>
+                        <p data-i18n="exp1Body">Lead technical direction for AI-driven software: LLMs and computer vision in client platforms. Delivered a major corporate integration that cut processing time 80% and cost 50%.</p>
+                    </li>
+                    <li>
+                        <h4 data-i18n="exp2Title">AI Engineer · DHT Solution</h4>
+                        <p class="meta" data-i18n="exp2Meta">Part-time · Sep 2024 – Jul 2025</p>
+                        <p data-i18n="exp2Body">Built and deployed ML systems; benchmarked LLM apps on a 10,000+ example dataset and improved response accuracy by 90%.</p>
+                    </li>
+                    <li>
+                        <h4 data-i18n="exp3Title">AI Intern · Claireye Intelligence</h4>
+                        <p class="meta" data-i18n="exp3Meta">Jul 2024 – Aug 2024 · CNN, YOLO</p>
+                        <p data-i18n="exp3Body">Computer vision and LLM product work: image recognition, web/app UI with RD, and frontend stability from customer feedback.</p>
+                    </li>
+                    <li>
+                        <h4 data-i18n="exp4Title">AI Edge Course · ITRI</h4>
+                        <p class="meta" data-i18n="exp4Meta">Jul 2024 – Aug 2024 · NVIDIA Jetson</p>
+                        <p data-i18n="exp4Body">Designed and taught edge-AI courses for industry engineers: Linux, DeepStream SDK, Docker, and Azure IoT Edge on Jetson.</p>
+                    </li>
+                </ol>
+            </article>
+            </div>
+        </section>
+
         <section id="projects" class="panel panel-projects" aria-labelledby="projects-title">
-            <div class="panel-fx" aria-hidden="true"></div>
+            <div class="panel-fx" aria-hidden="true">
+                <span class="fx-orbs"></span>
+                <span class="fx-particles"></span>
+                <span class="fx-beam"></span>
+                <span class="fx-geo"></span>
+            </div>
             <div class="wrap">
             <div class="section-heading">
                 <p class="eyebrow" data-i18n="projectsEyebrow">Projects</p>
@@ -236,100 +299,94 @@
             </div>
         </section>
 
-        <section id="resume" class="panel panel-resume" aria-labelledby="resume-title">
-            <div class="panel-fx" aria-hidden="true"></div>
+        <section id="education" class="panel panel-education" aria-labelledby="edu-title">
+            <div class="panel-fx" aria-hidden="true">
+                <span class="fx-orbs"></span>
+                <span class="fx-particles"></span>
+                <span class="fx-beam"></span>
+                <span class="fx-geo"></span>
+            </div>
             <div class="wrap">
             <div class="section-heading">
-                <p class="eyebrow" data-i18n="resumeEyebrow">Resume</p>
-                <h2 id="resume-title" data-i18n="resumeTitle">Education, experience, and proof</h2>
-                <p class="section-lede" data-i18n="resumeLede">In-browser summary. Download the PDF for the formatted version used in applications.</p>
-                <a class="btn btn-primary" href="Resume_YiHoChang.pdf" download="Resume_YiHoChang.pdf" data-i18n="ctaResumePdf">Download Resume (PDF)</a>
+                <p class="eyebrow" data-i18n="eduEyebrow">Education</p>
+                <h2 id="edu-title" data-i18n="eduTitle">Education background</h2>
+                <p class="section-lede" data-i18n="eduLede">Degrees and coursework that shape how I design and ship AI systems.</p>
             </div>
-
-            <div class="resume-layout">
-                <article class="resume-block" aria-labelledby="edu-title">
-                    <h3 id="edu-title" data-i18n="eduTitle">Education</h3>
-                    <ol class="timeline">
-                        <li>
-                            <h4>Oregon State University</h4>
-                            <p class="meta" data-i18n="edu1Meta">MEng · Computer Science, AI minor · GPA 3.76</p>
-                            <p data-i18n="edu1Dates">Sep 2025 – Dec 2026 · Advanced AI, Computer Vision, Machine Learning</p>
-                        </li>
-                        <li>
-                            <h4 data-i18n="edu2Name">National Taichung University of Education</h4>
-                            <p class="meta" data-i18n="edu2Meta">BS · Dual major in Digital Content Technology &amp; Computer Science · GPA 3.96</p>
-                            <p data-i18n="edu2Dates">Sep 2021 – Jun 2025</p>
-                        </li>
-                    </ol>
-                </article>
-
-                <article class="resume-block" aria-labelledby="exp-title">
-                    <h3 id="exp-title" data-i18n="expTitle">Experience</h3>
-                    <ol class="timeline">
-                        <li>
-                            <h4 data-i18n="exp1Title">Co-Founder &amp; CTO Advisor · E-Ranyx</h4>
-                            <p class="meta" data-i18n="exp1Meta">Sep 2025 – Present</p>
-                            <p data-i18n="exp1Body">Lead technical direction for AI-driven software: LLMs and computer vision in client platforms. Delivered a major corporate integration that cut processing time 80% and cost 50%.</p>
-                        </li>
-                        <li>
-                            <h4 data-i18n="exp2Title">AI Engineer · DHT Solution</h4>
-                            <p class="meta" data-i18n="exp2Meta">Part-time · Sep 2024 – Jul 2025</p>
-                            <p data-i18n="exp2Body">Built and deployed ML systems; benchmarked LLM apps on a 10,000+ example dataset and improved response accuracy by 90%.</p>
-                        </li>
-                        <li>
-                            <h4 data-i18n="exp3Title">AI Intern · Claireye Intelligence</h4>
-                            <p class="meta" data-i18n="exp3Meta">Jul 2024 – Aug 2024 · CNN, YOLO</p>
-                            <p data-i18n="exp3Body">Computer vision and LLM product work: image recognition, web/app UI with RD, and frontend stability from customer feedback.</p>
-                        </li>
-                        <li>
-                            <h4 data-i18n="exp4Title">AI Edge Course · ITRI</h4>
-                            <p class="meta" data-i18n="exp4Meta">Jul 2024 – Aug 2024 · NVIDIA Jetson</p>
-                            <p data-i18n="exp4Body">Designed and taught edge-AI courses for industry engineers: Linux, DeepStream SDK, Docker, and Azure IoT Edge on Jetson.</p>
-                        </li>
-                    </ol>
-                </article>
-
-                <article class="resume-block" aria-labelledby="cert-title">
-                    <h3 id="cert-title" data-i18n="certTitle">Certificates</h3>
-                    <ul class="link-list">
-                        <li><a href="https://www.coursera.org/account/accomplishments/verify/5RTEXB33Q2HG" target="_blank" rel="noopener noreferrer">Generative AI with LLMs</a><br><span class="meta" data-i18n="cert1Meta">DeepLearning.AI · AWS · Feb 2025</span></li>
-                        <li><a href="https://www.coursera.org/account/accomplishments/verify/TBFRIWA3XZ6O" target="_blank" rel="noopener noreferrer">Exploratory Data Analysis for ML</a><br><span class="meta" data-i18n="cert2Meta">IBM · Jan 2025</span></li>
-                    </ul>
-                </article>
+            <article class="resume-block">
+                <ol class="timeline">
+                    <li>
+                        <h4>Oregon State University</h4>
+                        <p class="meta" data-i18n="edu1Meta">MEng · Computer Science, AI minor · GPA 3.76</p>
+                        <p data-i18n="edu1Dates">Sep 2025 – Dec 2026 · Advanced AI, Computer Vision, Machine Learning</p>
+                    </li>
+                    <li>
+                        <h4 data-i18n="edu2Name">National Taichung University of Education</h4>
+                        <p class="meta" data-i18n="edu2Meta">BS · Dual major in Digital Content Technology &amp; Computer Science · GPA 3.96</p>
+                        <p data-i18n="edu2Dates">Sep 2021 – Jun 2025</p>
+                    </li>
+                </ol>
+            </article>
             </div>
+        </section>
+
+        <section id="certificates" class="panel panel-certificates" aria-labelledby="cert-title">
+            <div class="panel-fx" aria-hidden="true">
+                <span class="fx-orbs"></span>
+                <span class="fx-particles"></span>
+                <span class="fx-beam"></span>
+                <span class="fx-geo"></span>
+            </div>
+            <div class="wrap">
+            <div class="section-heading">
+                <p class="eyebrow" data-i18n="certEyebrow">Certificates</p>
+                <h2 id="cert-title" data-i18n="certTitle">Course credentials</h2>
+                <p class="section-lede" data-i18n="certLede">Course credentials in generative AI and machine learning.</p>
+            </div>
+            <article class="resume-block">
+                <ul class="link-list">
+                    <li><a href="https://www.coursera.org/account/accomplishments/verify/5RTEXB33Q2HG" target="_blank" rel="noopener noreferrer">Generative AI with LLMs</a><br><span class="meta" data-i18n="cert1Meta">DeepLearning.AI · AWS · Feb 2025</span></li>
+                    <li><a href="https://www.coursera.org/account/accomplishments/verify/TBFRIWA3XZ6O" target="_blank" rel="noopener noreferrer">Exploratory Data Analysis for ML</a><br><span class="meta" data-i18n="cert2Meta">IBM · Jan 2025</span></li>
+                </ul>
+            </article>
             </div>
         </section>
 
         <section id="contact" class="panel panel-contact" aria-labelledby="contact-title">
-            <div class="panel-fx" aria-hidden="true"></div>
-            <div class="wrap">
-            <div class="section-heading">
-                <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
-                <h2 id="contact-title" data-i18n="contactTitle">Let’s build something useful</h2>
-                <p class="section-lede" data-i18n="contactLede">Email or message me. I read every note about roles, collaborations, and interesting technical problems.</p>
+            <div class="panel-fx" aria-hidden="true">
+                <span class="fx-orbs"></span>
+                <span class="fx-particles"></span>
+                <span class="fx-beam"></span>
+                <span class="fx-geo"></span>
             </div>
-
+            <div class="wrap contact-wrap">
             <div class="contact-grid">
-                <ul class="contact-channels">
-                    <li>
-                        <a class="contact-card" href="mailto:chanyiho@oregonstate.edu" data-i18n-aria="emailAria" aria-label="Email Yi-Ho Chang">
-                            <span class="contact-label" data-i18n="labelEmail">Email</span>
-                            <span>chanyiho@oregonstate.edu</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="contact-card" href="https://www.linkedin.com/in/yi-ho-chang/" target="_blank" rel="noopener noreferrer" data-i18n-aria="linkedinAria" aria-label="Yi-Ho Chang on LinkedIn">
-                            <span class="contact-label">LinkedIn</span>
-                            <span>yi-ho-chang</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="contact-card" href="https://github.com/YHOneBox" target="_blank" rel="noopener noreferrer" data-i18n-aria="githubAria" aria-label="YHOneBox on GitHub">
-                            <span class="contact-label">GitHub</span>
-                            <span>YHOneBox</span>
-                        </a>
-                    </li>
-                </ul>
+                <div class="contact-left">
+                    <div class="section-heading">
+                        <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+                        <h2 id="contact-title" data-i18n="contactTitle">Let’s build something useful</h2>
+                        <p class="section-lede" data-i18n="contactLede">Email or message me. I read every note about roles, collaborations, and interesting technical problems.</p>
+                    </div>
+                    <ul class="contact-channels">
+                        <li>
+                            <a class="contact-card" href="mailto:onebox663269@gmail.com" data-i18n-aria="emailAria" aria-label="Email Yi-Ho Chang">
+                                <span class="contact-label" data-i18n="labelEmail">Email</span>
+                                <span>onebox663269@<wbr>gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="contact-card" href="https://www.linkedin.com/in/yi-ho-chang/" target="_blank" rel="noopener noreferrer" data-i18n-aria="linkedinAria" aria-label="Yi-Ho Chang on LinkedIn">
+                                <span class="contact-label">LinkedIn</span>
+                                <span>yi-ho-chang</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="contact-card" href="https://github.com/YHOneBox" target="_blank" rel="noopener noreferrer" data-i18n-aria="githubAria" aria-label="YHOneBox on GitHub">
+                                <span class="contact-label">GitHub</span>
+                                <span>YHOneBox</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <form id="contact-form" class="contact-form" novalidate>
                     <div class="field">
@@ -342,11 +399,12 @@
                     </div>
                     <div class="field">
                         <label for="message" data-i18n="labelMessage">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
+                    <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <p id="form-status" class="form-status" role="status" hidden></p>
                     <button type="submit" class="btn btn-primary" data-i18n="sendMessage">Send message</button>
-                    <p class="form-note" data-i18n="formNote">Opens your email app with the message filled in. Nothing is stored on this site.</p>
+                    <p class="form-note" data-i18n="formNote">Your message is sent directly to my inbox. Nothing is stored on this site.</p>
                 </form>
             </div>
             </div>
