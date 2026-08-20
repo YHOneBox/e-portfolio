@@ -358,6 +358,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupTheme();
     setupLang();
     setupNav();
+    setupAnchorScroll();
     setupScrollSpy();
     setupProjectDialog();
     setupContactForm();
@@ -543,6 +544,50 @@ function setupLang() {
     document.querySelectorAll("[data-lang-set]").forEach((btn) => {
         btn.addEventListener("click", () => setLang(btn.dataset.langSet));
     });
+}
+
+function headerOffset() {
+    const header = document.querySelector(".site-header");
+    return header ? Math.round(header.getBoundingClientRect().height) : 0;
+}
+
+function scrollToSection(id, behavior) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = Math.max(0, Math.round(window.scrollY + el.getBoundingClientRect().top - headerOffset()));
+    window.scrollTo({ top, left: 0, behavior });
+}
+
+function setupAnchorScroll() {
+    const reduceMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const sectionIds = new Set(["home", "about", "experience", "projects", "education", "certificates", "contact"]);
+
+    const go = (id, behavior) => {
+        scrollToSection(id, behavior ?? (reduceMotion() ? "auto" : "smooth"));
+    };
+
+    document.addEventListener("click", (event) => {
+        const link = event.target.closest('a[href^="#"]');
+        if (!link || link.getAttribute("href") === "#") return;
+        const id = link.getAttribute("href").slice(1);
+        if (!sectionIds.has(id) || !document.getElementById(id)) return;
+        event.preventDefault();
+        go(id);
+        if (location.hash !== `#${id}`) {
+            history.pushState(null, "", `#${id}`);
+        }
+    });
+
+    window.addEventListener("popstate", () => {
+        const id = location.hash.slice(1);
+        if (sectionIds.has(id)) go(id, "auto");
+        else if (!id) go("home", "auto");
+    });
+
+    const initial = location.hash.slice(1);
+    if (sectionIds.has(initial)) {
+        requestAnimationFrame(() => go(initial, "auto"));
+    }
 }
 
 function setupNav() {

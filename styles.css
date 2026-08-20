@@ -103,11 +103,12 @@ html[data-theme="light"] {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--header-h) + 12px);
+    /* Align section top with the sticky header (height + border). Extra padding left a strip of the previous section. */
+    scroll-padding-top: calc(var(--header-h) + 1px);
 }
 
 #home, #about, #projects, #education, #experience, #certificates, #contact {
-    scroll-margin-top: calc(var(--header-h) + 8px);
+    scroll-margin-top: 0;
 }
 
 html[data-lang="zh"] body {
