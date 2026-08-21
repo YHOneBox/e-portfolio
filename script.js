@@ -19,16 +19,16 @@ const I18N = {
         heroEyebrow: "AI Engineer",
         heroStatus: "ML · LLM · Computer Vision",
         heroName: "Yi-Ho Chang",
-        tagline: "I train and ship ML/DL systems that run in the real world — from real-time computer vision and LLMs to containerized apps on edge devices.",
-        valueProp: "MEng Computer Science (AI minor) at Oregon State University. AI Engineer at E-Ranyx, where I define how AI lands in production platforms and take models from research through deployment.",
+        tagline: "I develop and deploy machine learning systems for operational environments, including real-time computer vision, large language models, and containerized applications on edge devices.",
+        valueProp: "MEng, Computer Science (AI minor), Oregon State University. AI Engineer at E-Ranyx, responsible for production AI architecture and for taking models from research through deployment.",
         ctaProjects: "View Projects",
         ctaResume: "Download Resume",
         ctaContact: "Contact Me",
         aboutEyebrow: "About",
-        aboutTitle: "Engineering with curiosity, then shipping it",
-        aboutP1: "I am an AI engineer and Computer Science master’s student at Oregon State University, focused on machine learning, computer vision, LLMs, and systems that have to run outside the lab — including remote and edge deployments.",
-        aboutP2: "As an AI Engineer at E-Ranyx, I decide how AI is implemented in the company’s platforms and guide teams from research through shipping. My strongest work sits where models meet product: real-time vision (CNN, YOLO), generative and LLM systems (including RAG), and the Dockerized software around them.",
-        aboutP3: "I care about architecture that can be explained, interfaces that do not hide complexity, and results that can be measured — 93% weed-detection accuracy, 90% LLM response-accuracy lift, 80% faster client processing. I want roles where I own features from spike to production.",
+        aboutTitle: "Professional profile",
+        aboutP1: "I am an AI engineer and a Master of Engineering student in Computer Science at Oregon State University. My work focuses on machine learning, computer vision, large language models, and systems that must operate outside laboratory conditions, including remote and edge deployments.",
+        aboutP2: "As AI Engineer at E-Ranyx, I am responsible for how AI is implemented in the company’s platforms and for guiding work from research through production. My primary expertise is at the intersection of models and product systems: real-time vision (CNN, YOLO), generative and LLM pipelines including RAG, and the surrounding containerized software.",
+        aboutP3: "I emphasize architectures that can be documented, interfaces that expose rather than conceal complexity, and results that can be measured—including 93% weed-detection accuracy, a 90% improvement in LLM response accuracy, and an 80% reduction in client processing time. I seek roles in which I own features from initial investigation through production release.",
         portraitAlt: "Portrait of Yi-Ho Chang",
         skillsAria: "Core technical competencies",
         skillsTitle: "Core competencies",
@@ -37,53 +37,60 @@ const I18N = {
         skillsTools: "Deployment",
         skillsDomains: "Core domains",
         projectsEyebrow: "Projects",
-        projectsTitle: "Selected case studies",
-        projectsLede: "Four AI projects: multimodal systems, computer vision, and production platforms. Open a card for the case study.",
+        projectsTitle: "Selected projects",
+        projectsLede: "The following case studies cover multimodal interaction, computer vision, and production software platforms. Each entry documents context, method, and results.",
         readCase: "Read case study",
+        backProjects: "Back to projects",
+        closeMedia: "Close preview",
+        addMedia: "Add an image or video",
+        startLabel: "Start",
+        endLabel: "End",
+        durationLabel: "Duration",
+        featuresTitle: "Key features",
+        techUsed: "Tech stack",
+        relatedLinks: "Links",
+        approachTitle: "Method",
         p1Kicker: "Jun 2026 – Present",
         p1Title: "Interactive AI Avatar",
-        p1Summary: "A multimodal AI system for real-time interaction with a hyperrealistic avatar — from UI through APIs to low-latency architecture.",
+        p1Summary: "An end-to-end multimodal avatar system. Speech, text, and visual input are processed through a low-latency interface and API gateway, then ASR, NLP, and a multimodal LLM, and returned as synchronized speech and animation.",
         p2Kicker: "May 2026 – Present",
-        p2Title: "Custom LINE Ecosystem",
-        p2Summary: "A scalable LINE-centered platform that connects AI services to startup operations on the messaging layer people already use.",
+        p2Title: "LINE Official Account Manager",
+        p2Summary: "A self-hosted LINE Official Account management system that unifies inbound messaging, human handover, automated replies, knowledge retrieval, and draft generation. Messages are transmitted only after explicit confirmation.",
         p3Kicker: "Jan 2026 – Mar 2026",
-        p3Title: "Drone-Based Agricultural Weed Detection",
-        p3Summary: "Real-time weed detection from drone imagery using YOLO, with resolution experiments that reached 93% detection accuracy.",
-        p4Kicker: "Jan 2024 – Dec 2024",
-        p4Title: "Chinese Handwriting Rectification",
-        p4Summary: "CNN and cGAN/PatchGAN analysis of student handwriting that suggests corrections while preserving personal writing style.",
+        p3Title: "Precision Agriculture Weed Detection",
+        p3Summary: "An object-detection pipeline for identifying weeds in high-resolution drone imagery of perennial ryegrass and tall fescue, using YOLO26 and a controlled study of tiling and input resolution.",
         ctaResumePdf: "Download Resume (PDF)",
         eduEyebrow: "Education",
-        eduTitle: "Education background",
-        eduLede: "Degrees and coursework that shape how I design and ship AI systems.",
-        edu1Meta: "MEng · Computer Science, AI minor · GPA 3.76",
+        eduTitle: "Education",
+        eduLede: "Academic training relevant to the design and deployment of AI systems.",
+        edu1Meta: "MEng · Computer Science, AI minor",
         edu1Dates: "Sep 2025 – Dec 2026 · Advanced AI, Computer Vision, Machine Learning",
         edu2Name: "National Taichung University of Education",
-        edu2Meta: "BS · Dual major in Digital Content Technology & Computer Science · GPA 3.96",
+        edu2Meta: "BS · Dual major in Digital Content Technology & Computer Science",
         edu2Dates: "Sep 2021 – Jun 2025",
         expEyebrow: "Experience",
         expTitle: "Professional experience",
-        expLede: "Product-facing AI work across startups, internships, and industry training. Download the PDF for the formatted version used in applications.",
+        expLede: "Professional appointments in applied AI, including industry positions, internships, and instructional work. A formatted résumé is available as a PDF.",
         exp1Title: "AI Engineer · E-Ranyx",
         exp1Meta: "Sep 2025 – Present",
-        exp1Body: "Lead technical direction for AI-driven software: LLMs and computer vision in client platforms. Delivered a major corporate integration that cut processing time 80% and cost 50%.",
+        exp1Body: "Responsible for technical direction of AI-driven software, including large language models and computer vision in client platforms. Delivered an enterprise integration that reduced processing time by 80% and cost by 50%.",
         exp2Title: "AI Engineer · DHT Solution",
         exp2Meta: "Part-time · Sep 2024 – Jul 2025",
-        exp2Body: "Built and deployed ML systems; benchmarked LLM apps on a 10,000+ example dataset and improved response accuracy by 90%.",
+        exp2Body: "Designed and deployed machine learning systems. Evaluated LLM applications on a dataset of more than 10,000 examples and improved response accuracy by 90%.",
         exp3Title: "AI Intern · Claireye Intelligence",
         exp3Meta: "Jul 2024 – Aug 2024 · CNN, YOLO",
-        exp3Body: "Computer vision and LLM product work: image recognition, web/app UI with RD, and frontend stability from customer feedback.",
+        exp3Body: "Contributed to computer vision and LLM product development, including image recognition, collaboration with research and development on web and application interfaces, and frontend stability informed by user feedback.",
         exp4Title: "AI Edge Course · ITRI",
         exp4Meta: "Jul 2024 – Aug 2024 · NVIDIA Jetson",
-        exp4Body: "Designed and taught edge-AI courses for industry engineers: Linux, DeepStream SDK, Docker, and Azure IoT Edge on Jetson.",
+        exp4Body: "Designed and delivered edge-AI instruction for industry engineers, covering Linux, DeepStream SDK, Docker, and Azure IoT Edge on NVIDIA Jetson.",
         certEyebrow: "Certificates",
         certTitle: "Course credentials",
-        certLede: "Course credentials in generative AI and machine learning.",
+        certLede: "Completed coursework in generative artificial intelligence and machine learning.",
         cert1Meta: "DeepLearning.AI · AWS · Feb 2025",
         cert2Meta: "IBM · Jan 2025",
         contactEyebrow: "Contact",
-        contactTitle: "Let’s build something useful",
-        contactLede: "Email or message me. I read every note about roles, collaborations, and interesting technical problems.",
+        contactTitle: "Contact",
+        contactLede: "Please write with inquiries regarding positions, collaboration, or technical discussion. Correspondence is reviewed directly.",
         emailAria: "Email Yi-Ho Chang",
         linkedinAria: "Yi-Ho Chang on LinkedIn",
         githubAria: "YHOneBox on GitHub",
@@ -95,7 +102,7 @@ const I18N = {
         formNote: "Your message is sent directly to my inbox. Nothing is stored on this site.",
         formNeedFields: "Please fill in your name, a valid email, and a message.",
         formSending: "Sending your message…",
-        formOpened: "Message sent. I’ll get back to you by email.",
+        formOpened: "Message sent. I will reply by email.",
         formActivate: "Check Gmail (and spam) for a FormSubmit email, click Activate Form, then send again.",
         formFailed: "Could not send right now. Email me at onebox663269@gmail.com, or try again.",
         footer: "Built for the web, hosted on GitHub Pages.",
@@ -106,7 +113,10 @@ const I18N = {
         impact: "Impact & results",
         watchDemo: "Watch demo",
         watchPlay: "Watch gameplay",
-        githubRepo: "GitHub repository"
+        githubRepo: "GitHub repository",
+        prevSlide: "Previous image",
+        nextSlide: "Next image",
+        slideN: "Show image"
     },
     zh: {
         skip: "跳到主要內容",
@@ -128,16 +138,16 @@ const I18N = {
         heroEyebrow: "AI 工程師",
         heroStatus: "機器學習 · LLM · 電腦視覺",
         heroName: "張翊禾",
-        tagline: "我訓練並交付能在真實環境跑的 ML/DL 系統——從即時電腦視覺、LLM，到在邊緣裝置上以容器部署的應用。",
-        valueProp: "Oregon State University 電腦科學碩士（AI 輔系）。E-Ranyx 的 AI 工程師，負責把 AI 做到公司平台裡，並帶領團隊從研究走到上線。",
+        tagline: "我開發並部署可於實際環境運作的機器學習系統，涵蓋即時電腦視覺、大型語言模型，以及邊緣裝置上的容器化應用。",
+        valueProp: "Oregon State University 電腦科學碩士（AI 輔系）。現任 E-Ranyx AI 工程師，負責生產環境之 AI 架構，並主導模型自研究至部署之全程。",
         ctaProjects: "查看專案",
         ctaResume: "下載履歷",
         ctaContact: "與我聯絡",
         aboutEyebrow: "關於",
-        aboutTitle: "帶著好奇心工程，再把它做出來",
-        aboutP1: "我是 Oregon State University 電腦科學碩士生與 AI 工程師，專注機器學習、電腦視覺、LLM，以及必須在實驗室之外運作的系統——包含遠端與邊緣部署。",
-        aboutP2: "作為 E-Ranyx 的 AI 工程師，我決定 AI 如何進入公司平台，並帶領團隊從研究做到交付。我最熟的是模型與產品交會處：即時視覺（CNN、YOLO）、生成式與 LLM（含 RAG），以及外圍的 Docker 化軟體。",
-        aboutP3: "我在意能解釋的架構、不把複雜藏起來的介面，以及量得出來的結果——雜草偵測準確率 93%、LLM 回覆準確率提升 90%、客戶處理時間加快 80%。我希望能從試作一路擁有到上線。",
+        aboutTitle: "專業簡介",
+        aboutP1: "我是 AI 工程師，亦為 Oregon State University 電腦科學碩士生。研究與實務重點為機器學習、電腦視覺、大型語言模型，以及必須在實驗室之外運作的系統，包含遠端與邊緣部署。",
+        aboutP2: "於 E-Ranyx 擔任 AI 工程師，負責公司平台之 AI 實作，並主導自研究至上線之流程。專長位於模型與產品系統之交會：即時視覺（CNN、YOLO）、生成式與 LLM 管線（含 RAG），以及外圍之容器化軟體。",
+        aboutP3: "我重視可被文件化的架構、不隱匿複雜度的介面，以及可量化的成果——雜草偵測準確率 93%、LLM 回覆準確率提升 90%、客戶處理時間減少 80%。尋求能自前期評估至上線全程負責功能的職位。",
         portraitAlt: "張翊禾的肖像",
         skillsAria: "核心技術能力",
         skillsTitle: "核心能力",
@@ -146,53 +156,60 @@ const I18N = {
         skillsTools: "部署",
         skillsDomains: "核心領域",
         projectsEyebrow: "專案",
-        projectsTitle: "精選案例",
-        projectsLede: "四件 AI 專案：多模態系統、電腦視覺與生產平台。點開卡片閱讀案例。",
+        projectsTitle: "精選專案",
+        projectsLede: "下列案例涵蓋多模態互動、電腦視覺與生產軟體平台。各篇說明問題脈絡、方法與結果。",
         readCase: "閱讀案例",
+        backProjects: "回到專案",
+        closeMedia: "關閉預覽",
+        addMedia: "請添加影片或圖片",
+        startLabel: "開始時間",
+        endLabel: "結束時間",
+        durationLabel: "總時長",
+        featuresTitle: "主要功能",
+        techUsed: "使用技術",
+        relatedLinks: "相關連結",
+        approachTitle: "方法",
         p1Kicker: "2026/6 – 至今",
-        p1Title: "Interactive AI Avatar",
-        p1Summary: "多模態 AI 系統，支援與超寫實虛擬人即時互動——從 UI、API 整合到低延遲架構。",
+        p1Title: "互動式 AI 虛擬人",
+        p1Summary: "端到端多模態虛擬人系統。語音、文字與視覺輸入經低延遲介面與 API 閘道，進入 ASR、NLP 與多模態 LLM，再以同步語音與動畫輸出。",
         p2Kicker: "2026/5 – 至今",
-        p2Title: "Custom LINE Ecosystem",
-        p2Summary: "以 LINE 為核心的可擴充平台，把 AI 服務接到新創已在使用的通訊層與營運流程。",
+        p2Title: "官方帳號管理系統",
+        p2Summary: "可自架之 LINE 官方帳號管理系統，整合進線、人工接管、自動回覆、知識檢索與草稿產生。訊息僅在明確確認後送出。",
         p3Kicker: "2026/1 – 2026/3",
-        p3Title: "無人機農業雜草偵測",
-        p3Summary: "以無人機影像與 YOLO 做即時雜草偵測，並比較解析度與訓練設定，最終達到 93% 偵測準確率。",
-        p4Kicker: "2024/1 – 2024/12",
-        p4Title: "中文字跡矯正系統",
-        p4Summary: "以 CNN 與 cGAN/PatchGAN 分析學生字跡並提出矯正，同時保留個人書寫風格。",
+        p3Title: "精準農業雜草偵測",
+        p3Summary: "以 YOLO26 於多年生黑麥草與高羊茅之高解析無人機影像進行雜草物件偵測，並以控制實驗比較拼貼與輸入解析度。",
         ctaResumePdf: "下載履歷（PDF）",
         eduEyebrow: "學歷",
         eduTitle: "教育背景",
-        eduLede: "形塑我如何設計並交付 AI 系統的學位與課程。",
-        edu1Meta: "碩士 · 電腦科學，AI 輔系 · GPA 3.76",
+        eduLede: "與 AI 系統設計及部署相關之學歷與課程。",
+        edu1Meta: "碩士 · 電腦科學，AI 輔系",
         edu1Dates: "2025/9 – 2026/12 · Advanced AI、Computer Vision、Machine Learning",
         edu2Name: "國立臺中教育大學",
-        edu2Meta: "學士 · 數位內容科技與資訊工程雙主修 · GPA 3.96",
+        edu2Meta: "學士 · 數位內容科技與資訊工程雙主修",
         edu2Dates: "2021/9 – 2025/6",
         expEyebrow: "經歷",
         expTitle: "工作經歷",
-        expLede: "新創、實習與產業培訓中面向產品的 AI 工作。申請時請下載 PDF 格式版本。",
+        expLede: "應用 AI 相關職務，包含產業職位、實習與教學。格式化履歷請下載 PDF。",
         exp1Title: "AI 工程師 · E-Ranyx",
         exp1Meta: "2025/9 – 至今",
-        exp1Body: "主導 AI 軟體技術方向：將 LLM 與電腦視覺導入客戶平台。完成大型企業整合，處理時間減少 80%、成本減少 50%。",
+        exp1Body: "負責 AI 軟體技術方向，將大型語言模型與電腦視覺導入客戶平台。完成企業整合，處理時間減少 80%、成本減少 50%。",
         exp2Title: "AI 工程師 · DHT Solution",
         exp2Meta: "兼職 · 2024/9 – 2025/7",
-        exp2Body: "建置並部署機器學習系統；以超過 10,000 筆資料基準測試 LLM 應用，回覆準確率提升 90%。",
+        exp2Body: "設計並部署機器學習系統。以超過 10,000 筆資料評估 LLM 應用，回覆準確率提升 90%。",
         exp3Title: "AI 實習生 · Claireye Intelligence",
         exp3Meta: "2024/7 – 2024/8 · CNN、YOLO",
-        exp3Body: "電腦視覺與 LLM 產品：影像辨識、與 RD 協作網頁／App 介面，並依客戶回饋優化前端穩定度。",
+        exp3Body: "參與電腦視覺與 LLM 產品開發，包含影像辨識、與研發單位協作網頁與應用介面，並依使用者回饋提升前端穩定度。",
         exp4Title: "AI 邊緣課程 · 工研院",
         exp4Meta: "2024/7 – 2024/8 · NVIDIA Jetson",
-        exp4Body: "為產業工程師設計並授課：Linux、DeepStream SDK、Docker 與 Azure IoT Edge 於 Jetson 平台。",
+        exp4Body: "為產業工程師規劃並講授邊緣 AI 課程，內容包含 Linux、DeepStream SDK、Docker 與 Azure IoT Edge 於 NVIDIA Jetson 平台。",
         certEyebrow: "證照",
         certTitle: "證書",
-        certLede: "生成式 AI 與機器學習相關課程證書。",
+        certLede: "生成式人工智慧與機器學習相關課程證書。",
         cert1Meta: "DeepLearning.AI · AWS · 2025/2",
         cert2Meta: "IBM · 2025/1",
         contactEyebrow: "聯絡",
-        contactTitle: "一起做有用的東西",
-        contactLede: "歡迎用信件或訊息找我。職缺、合作與有意思的技術問題，我都會看。",
+        contactTitle: "聯絡",
+        contactLede: "如有職缺、合作或技術討論，歡迎來信。來件將直接審閱。",
         emailAria: "寄信給張翊禾",
         linkedinAria: "張翊禾的 LinkedIn",
         githubAria: "YHOneBox 的 GitHub",
@@ -215,7 +232,10 @@ const I18N = {
         impact: "影響與成果",
         watchDemo: "觀看演示",
         watchPlay: "觀看遊玩",
-        githubRepo: "GitHub 儲存庫"
+        githubRepo: "GitHub 儲存庫",
+        prevSlide: "上一張",
+        nextSlide: "下一張",
+        slideN: "顯示圖片"
     }
 };
 
@@ -223,78 +243,140 @@ const PROJECTS = {
     avatar: {
         kickerKey: "p1Kicker",
         titleKey: "p1Title",
+        cover: "files/projects/avatar/Realtime_ai_avatar.jpg",
+        media: [
+            { type: "image", src: "files/projects/avatar/Realtime_ai_avatar.jpg", alt: { en: "Interactive AI avatar UI", zh: "互動式 AI 虛擬人介面" }, caption: { en: "Live camera, avatar, voice meter, and conversation in one UI", zh: "鏡頭、虛擬人、語音偵測與對話同屏" } },
+            { type: "image", src: "files/projects/avatar/visual.png", alt: { en: "Architecture and interaction flow diagram", zh: "架構與互動流程圖" }, caption: { en: "Speech, text, and vision through API, multimodal LLM, TTS, and avatar rendering", zh: "語音、文字與視覺經 API、多模態 LLM、TTS 到虛擬人渲染" } }
+        ],
         context: {
-            en: "Teams needed a way for people to talk to a hyperrealistic AI avatar in real time, not a delayed chatbot. Latency, multimodal input, and a usable UI all had to hold together at once.",
-            zh: "團隊需要能與超寫實 AI 虛擬人即時對話，而不是延遲的聊天機器人。延遲、多模態輸入與可用 UI 必須同時成立。"
+            en: "This project implements a real-time interactive avatar that accepts speech, text, and visual input within a single interface and returns a low-latency spoken, animated response, rather than a delayed text-only chatbot.",
+            zh: "本專案實作即時互動虛擬人：於單一介面接收語音、文字與視覺輸入，並以低延遲之語音與動畫回覆，而非延遲的純文字聊天機器人。"
         },
         role: {
-            en: "Architecting the multimodal stack end to end: UI, multiple complex API integrations, and continuous tuning so large-scale traffic still gets low-latency responses.",
-            zh: "端到端架構多模態系統：UI、多個複雜 API 整合，以及持續調校，讓大規模流量仍能低延遲回應。"
+            en: "I designed the architecture and interaction flow: capture on kiosk, desktop, or mobile devices; a secure API gateway; a multimodal backend; and text-to-speech with avatar animation. Emphasis was placed on scalable API and user-interface deployment in order to preserve real-time performance under load.",
+            zh: "我負責架構與互動流程：於互動亭、桌機或行動裝置擷取輸入；經安全 API 閘道進入多模態後端；再進行語音合成與虛擬人動畫。重點在於可擴充之 API 與介面部署，以在負載下維持即時效能。"
         },
-        stack: "LLM, multimodal AI, realtime APIs.",
+        approach: {
+            en: "Requests are captured and encoded in the user-interface layer, then routed through a secure API gateway. The backend performs automatic speech recognition, natural-language processing, multimodal LLM fusion of text, audio, and video, and conversation-context management. Formatted replies are delivered to text-to-speech and avatar rendering so that lip synchronization and gesture remain aligned with audio.",
+            zh: "請求於使用者介面層擷取並編碼，再經安全 API 閘道路由。後端執行自動語音辨識、自然語言處理、文字／音訊／影像之多模態 LLM 融合，以及對話脈絡管理。格式化回覆送至語音合成與虛擬人渲染，使口型與手勢與音訊對齊。"
+        },
+        features: {
+            en: [
+                "Speech, text, and live visual input",
+                "Low-latency capture on kiosk, desktop, and mobile",
+                "Secure API gateway with scalable API and interface deployment",
+                "Multimodal engine: ASR, NLP, LLM fusion, and conversation context",
+                "Text-to-speech with real-time lip synchronization and gesture"
+            ],
+            zh: [
+                "語音、文字與即時視覺輸入",
+                "互動亭、桌機與行動裝置上之低延遲擷取",
+                "安全 API 閘道，支援可擴充之 API 與介面部署",
+                "多模態引擎：ASR、NLP、LLM 融合與對話脈絡",
+                "語音合成，並即時對齊口型與手勢"
+            ]
+        },
+        stack: "ASR, NLP, multimodal LLM, TTS, realtime APIs, avatar rendering.",
+        tech: ["ASR", "NLP", "Multimodal LLM", "TTS", "Secure API Gateway", "Avatar rendering"],
+        timeline: { start: { en: "Jun 2026", zh: "2026/6" }, end: { en: "Present", zh: "至今" }, duration: { en: "Ongoing", zh: "進行中" } },
         impact: {
-            en: "A production-oriented avatar pipeline that treats interaction as a systems problem — model quality plus the product path people actually use.",
-            zh: "以產品為導向的虛擬人管線：把互動當成系統問題——模型品質，加上人們真正會用的產品路徑。"
+            en: "The system closes a full interaction loop: a user may speak, type, or be observed by camera, and receives a voiced, animated reply. Low-latency delivery constrained the design of each layer.",
+            zh: "系統形成完整互動迴路：使用者可說話、輸入文字，或由鏡頭擷取畫面，並獲得具語音與動畫之回覆。各層設計均受低延遲需求約束。"
         }
     },
     line: {
         kickerKey: "p2Kicker",
         titleKey: "p2Title",
+        cover: "files/projects/line/line_system.jpg",
+        media: [
+            { type: "image", src: "files/projects/line/line_system.jpg", alt: { en: "LINE Official Account Manager chat desk", zh: "官方帳號管理系統聊天工作台" }, caption: { en: "Chat desk with AI knowledge, suggest, and search", zh: "聊天工作台：知識庫、AI 建議與搜尋" } }
+        ],
         context: {
-            en: "Core startup operations needed to live where users already communicate. LINE is the default messaging layer in the target market, so AI had to plug into that ecosystem rather than a greenfield app.",
-            zh: "新創核心營運需要長在使用者已經在用的通訊層上。目標市場以 LINE 為預設訊息平台，AI 必須接入該生態，而不是另做一套 App。"
+            en: "LINE is the primary messaging channel for many users. This project provides a private operations console that combines inbound messages, human replies, and automated assistance, with isolated accounts, no public registration, and no outbound draft until an operator confirms transmission.",
+            zh: "LINE 為多數使用者之主要通訊管道。本專案提供私有營運工作台，整合進線、人工回覆與自動化處理；帳號資料隔離、無公開註冊，且草稿須經操作者確認始得送出。"
         },
         role: {
-            en: "Designed a robust, scalable LINE platform for messaging and workflows, and wired AI services into the same operations surface.",
-            zh: "設計可擴充的 LINE 訊息與工作流平台，並把 AI 服務接到同一套營運介面。"
+            en: "I designed a self-hosted LINE Official Account console with isolated accounts. Each account is assigned a dedicated webhook, encrypted channel credentials, and imported language-model keys with explicit routing. Automatic reply, suggestion, and search are independent tasks, each with its own credentials, models, and fallbacks.",
+            zh: "我設計可自架、帳號隔離之 LINE 官方帳號工作台。各帳號具備專屬 webhook、加密頻道憑證，以及可明確指定路由之語言模型金鑰。自動回覆、建議與搜尋為獨立任務，金鑰、模型與備援可分別設定。"
         },
-        stack: "LINE Messaging API, platform architecture, AI integration.",
+        approach: {
+            en: "Inbound LINE events are signature-verified, persisted, and broadcast to the console. In automated mode, keyword rules are evaluated first; remaining text is debounced, retrieved against contact-scoped knowledge (lexical RAG over PDF, text, Markdown, and Word documents), and returned by push message. Human mode disables the language model. Suggestion drafts a reply; search answers from the transcript. Neither function transmits to LINE until send is confirmed.",
+            zh: "進線事件經簽章驗證後入庫，並推播至工作台。自動化模式下先比對關鍵字規則；其餘文字經合併等待，並以聯絡人範圍之知識庫（PDF、純文字、Markdown、Word 之詞彙檢索）產生回覆後推播。人工模式不呼叫語言模型。建議功能產生草稿；搜尋僅依據對話紀錄。兩者皆須確認傳送始送至 LINE。"
+        },
+        features: {
+            en: [
+                "Separated administration and operations views so that accounts remain isolated",
+                "Per-conversation automated or human handling; closing the browser does not interrupt the webhook",
+                "Keyword rules for predetermined replies, with rate limits and debounce",
+                "Shared and per-contact knowledge documents for grounded generation",
+                "Suggestion and search tools; Gemini, OpenAI, Claude, or OpenAI-compatible endpoints with failover"
+            ],
+            zh: [
+                "管理與營運畫面分離，帳號資料互不可見",
+                "各對話可採自動化或人工處理；關閉瀏覽器不中斷 webhook",
+                "關鍵字規則處理既定回覆，並設頻率限制與合併等待",
+                "共用與單人知識文件，供有根據之生成",
+                "建議與搜尋工具；支援 Gemini、OpenAI、Claude 或相容端點，並可備援"
+            ]
+        },
+        stack: "LINE Messaging API, multi-provider LLM routing, lexical RAG, FastAPI, SQLite.",
+        tech: ["LINE Messaging API", "Gemini", "OpenAI", "Claude", "RAG", "WebSocket desk", "SQLite"],
+        timeline: { start: { en: "May 2026", zh: "2026/5" }, end: { en: "Present", zh: "至今" }, duration: { en: "Ongoing", zh: "進行中" } },
         impact: {
-            en: "A LINE-centered ecosystem that can carry company operations at scale instead of a one-off bot demo.",
-            zh: "以 LINE 為中心的生態系，能承載公司營運規模，而不是一次性機器人演示。"
+            en: "The console can receive, reply, transfer to a human operator, and run automated assistance in one place. Data remain on the host machine. API keys are imported and assigned in settings and are not silently replaced by a server environment default.",
+            zh: "工作台可於同一介面收訊、回覆、改由人工處理並執行自動化。資料留於架設主機。金鑰於設定中匯入並指派，不以伺服器環境變數暗中取代。"
         }
     },
     weed: {
         kickerKey: "p3Kicker",
         titleKey: "p3Title",
+        cover: "files/projects/weed/image1.png",
+        media: [
+            { type: "image", src: "files/projects/weed/image1.png", alt: { en: "YOLO weed boxes on a drone tile", zh: "無人機拼貼上的 YOLO 雜草框" }, caption: { en: "Detected weeds on a drone tile", zh: "無人機拼貼上的雜草偵測" } },
+            { type: "image", src: "files/projects/weed/image2.png", alt: { en: "Second drone tile with weed detections", zh: "第二張拼貼的雜草偵測" }, caption: { en: "Same field, adjacent tile", zh: "同一田區的相鄰拼貼" } }
+        ],
         context: {
-            en: "Agricultural teams needed real-time weed spotting from drone imagery, not offline batch labeling. Accuracy had to stay high across image resolutions.",
-            zh: "農業團隊需要從無人機影像即時找出雜草，而不是離線批次標註。不同影像解析度下準確率都必須維持。"
+            en: "This work was completed as the AI-535 Deep Learning final project with Tz-Jie Dai and Yu-Yu Chiang, under the instruction of Fuxin Li. The objective was to detect weeds mixed into crop rows from drone RGB imagery, rather than from laboratory photographs. The dataset comprised 171 LabelMe-annotated frames of approximately 6,000 by 5,000–6,000 pixels from perennial ryegrass and tall fescue fields.",
+            zh: "本工作為 AI-535 深度學習期末專案，與戴子傑、蔣雨諭共同完成，指導教師為 Fuxin Li。目標為自無人機 RGB 影像中，於實際作物行列偵測雜草，而非實驗室拍攝影像。資料集為 171 張 LabelMe 標註畫面，解析度約 6,000 × 5,000–6,000 像素，取自多年生黑麥草與高羊茅田。"
         },
         role: {
-            en: "Built a YOLO-based detector, ran separate and joint training, compared resolution effects, and tightened the test loop.",
-            zh: "建置 YOLO 偵測器，進行分開與聯合訓練、比較解析度影響，並收斂測試流程。"
+            en: "I developed the detection pipeline: converting polygons to YOLO bounding boxes, tiling large orthophotos so that a detector could be trained, and comparing training configurations. Bounding boxes that straddled tile boundaries were a principal failure mode; each box was therefore assigned to the tile containing its center.",
+            zh: "我負責偵測管線：將多邊形轉換為 YOLO 邊界框、將大型正射影像切分為可訓練之拼貼，並比較訓練設定。跨越拼貼邊界之框為主要失效模式，故各框僅歸入其中心所在之拼貼。"
         },
-        stack: "YOLO, computer vision, Python.",
+        approach: {
+            en: "YOLO26n was trained under GPU memory constraints (the s and m variants showed no material gain), comparing tiling with crop, tiling with center anchoring, and scale-and-pad, at 640, 1,280, and 2,560 pixels (5,120 exhausted video memory). Separate training on ryegrass versus fescue, compared with a merged set, produced little difference on the training split and a modest test gain for the unified model. Performance peaked at 1,280 pixels; 2,560 pixels failed because labels became too small relative to the frame.",
+            zh: "於 GPU 記憶體限制下訓練 YOLO26n（s 與 m 無明顯增益），比較切塊裁切、切塊中心錨定與縮放補邊，以及 640、1,280、2,560 像素（5,120 顯存不足）。黑麥草與羊茅分開訓練相對於合併訓練，於訓練集差異不大，合併模型於測試集略優。1,280 像素表現最佳；2,560 像素失效，因標註相對整張影像過小。"
+        },
+        features: {
+            en: [
+                "171 drone images, two crop types, and a weed class derived from LabelMe polygons",
+                "Tiling with center anchoring to avoid fragmented boxes",
+                "Resolution comparison at 640, 1,280, and 2,560 pixels",
+                "Merged versus split-field training to assess generalization",
+                "Early stopping (patience 100, maximum 1,000 epochs)"
+            ],
+            zh: [
+                "171 張無人機影像、兩種作物、由 LabelMe 多邊形轉換之雜草類別",
+                "切塊並以中心錨定，避免邊界框被切碎",
+                "解析度比較：640、1,280、2,560 像素",
+                "合併與分田訓練以評估泛化",
+                "早停訓練（patience 100，最多 1,000 個 epoch）"
+            ]
+        },
+        stack: "YOLO26, Python, LabelMe, drone RGB tiles.",
+        tech: ["YOLO26", "Python", "LabelMe", "OpenCV", "Drone RGB"],
+        timeline: { start: { en: "Jan 2026", zh: "2026/1" }, end: { en: "Mar 2026", zh: "2026/3" }, duration: { en: "3 months", zh: "3個月" } },
         impact: {
-            en: "Reached 93% detection accuracy after the resolution and training experiments.",
-            zh: "在解析度與訓練實驗後達到 93% 偵測準確率。"
+            en: "Tiling with center anchoring outperformed naive cropping by a small margin. Scale-and-pad appeared strong during training but overfit. No configuration dominated all metrics; tile size should match weed scale. The practical operating point was 1,280-pixel tiles with merged data. The strongest test loop reached 93% detection.",
+            zh: "切塊中心錨定略優於直接裁切。縮放補邊於訓練階段表現較佳，但有過擬合。無單一設定全面勝出；拼貼尺寸應對應雜草尺度。實務操作點為 1,280 像素拼貼加合併資料。最佳測試迴圈達 93% 偵測率。"
         }
-    },
-    handwriting: {
-        kickerKey: "p4Kicker",
-        titleKey: "p4Title",
-        context: {
-            en: "Students needed handwriting feedback that improved structure and stroke shape without erasing personal style. Generic OCR treated style as noise.",
-            zh: "學生需要能改善結構與筆畫、又不抹平個人風格的字跡回饋。一般 OCR 會把風格當雜訊。"
-        },
-        role: {
-            en: "Trained CNN plus conditional GAN / PatchGAN on large sets of Chinese characters so the system could evaluate a sample and overlay correction lines and suggestions on screen.",
-            zh: "以大量中文字訓練 CNN 與 conditional GAN / PatchGAN，讓系統能評估樣本，並在螢幕上疊加矯正線與建議。"
-        },
-        stack: "Python, CNN, cGAN, PatchGAN.",
-        impact: {
-            en: "A year-long pipeline for style-preserving correction: unbalanced structure and incorrect stroke shapes are flagged without forcing a single font.",
-            zh: "歷時一年的保留風格矯正管線：標出結構失衡與錯誤筆畫，而不強迫單一字型。"
-        },
-        demo: "https://www.youtube-nocookie.com/embed/Q9f0xyXfUW4",
-        demoKey: "watchDemo"
     }
 };
 
 let lang = document.documentElement.getAttribute("data-lang") === "zh" ? "zh" : "en";
 let openProjectId = null;
-let lastDialogOpener = null;
+const carouselTimers = new Set();
+const CAROUSEL_MS = 4500;
 
 function t(key) {
     return I18N[lang][key] || I18N.en[key] || key;
@@ -341,7 +423,7 @@ function applyI18n() {
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.setAttribute("content", theme === "light" ? "#f3f6f9" : "#0b0d12");
 
-    if (openProjectId) fillProjectDialog(openProjectId);
+    if (openProjectId) fillProjectPage(openProjectId);
 }
 
 function setLang(next) {
@@ -360,167 +442,26 @@ document.addEventListener("DOMContentLoaded", () => {
     setupNav();
     setupAnchorScroll();
     setupScrollSpy();
-    setupProjectDialog();
+    setupPanelFx();
+    setupProjectPage();
     setupContactForm();
-    setupAmbientFx();
 });
 
-function setupAmbientFx() {
-    const finePointer = window.matchMedia("(pointer: fine)").matches;
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const canvas = document.getElementById("fx-canvas");
-
-    let pointerX = 0;
-    let pointerY = 0;
-    if (finePointer && !reduceMotion) {
-        let frame = 0;
-        window.addEventListener("pointermove", (event) => {
-            pointerX = event.clientX;
-            pointerY = event.clientY;
-            if (frame) return;
-            frame = requestAnimationFrame(() => {
-                frame = 0;
-                document.documentElement.style.setProperty("--fx-px", `${(event.clientX / window.innerWidth - 0.5) * 28}px`);
-                document.documentElement.style.setProperty("--fx-py", `${(event.clientY / window.innerHeight - 0.5) * 20}px`);
-            });
-        }, { passive: true });
-    }
-
-    if (!canvas || reduceMotion) return;
-    const ctx = canvas.getContext("2d", { alpha: true });
-    if (!ctx) return;
-
-    const palettes = {
-        home: [92, 225, 255],
-        about: [46, 230, 166],
-        experience: [46, 230, 166],
-        projects: [183, 148, 246],
-        education: [92, 225, 255],
-        certificates: [240, 212, 138],
-        contact: [92, 225, 255]
-    };
-
-    let width = 0;
-    let height = 0;
-    let dpr = 1;
-    let particles = [];
-    let sparks = [];
-    let color = palettes.home.slice();
-    let raf = 0;
-    const isMobile = window.matchMedia("(max-width: 700px)").matches;
-
-    const resize = () => {
-        dpr = Math.min(window.devicePixelRatio || 1, 2);
-        width = canvas.clientWidth;
-        height = canvas.clientHeight;
-        canvas.width = Math.floor(width * dpr);
-        canvas.height = Math.floor(height * dpr);
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        const count = Math.round(Math.min(isMobile ? 42 : 88, (width * height) / (isMobile ? 22000 : 14000)));
-        particles = Array.from({ length: count }, () => ({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.55,
-            vy: (Math.random() - 0.5) * 0.55,
-            r: Math.random() * 1.8 + 0.5
-        }));
-    };
-
-    const spawnSpark = () => {
-        const fromTop = Math.random() > 0.35;
-        sparks.push({
-            x: Math.random() * width,
-            y: fromTop ? -20 : Math.random() * height * 0.4,
-            vx: (Math.random() * 3.2 + 2.4) * (Math.random() > 0.5 ? 1 : -1),
-            vy: Math.random() * 2.4 + 2.8,
-            life: 1
-        });
-    };
-
-    const lerp = (from, to, t) => from + (to - from) * t;
-
-    const tick = () => {
-        const target = palettes[document.documentElement.dataset.fxSection] || palettes.home;
-        color[0] = lerp(color[0], target[0], 0.04);
-        color[1] = lerp(color[1], target[1], 0.04);
-        color[2] = lerp(color[2], target[2], 0.04);
-        const [r, g, b] = color.map((n) => Math.round(n));
-        const light = document.documentElement.dataset.theme === "light";
-        const alpha = light ? 0.28 : 0.72;
-
-        ctx.clearRect(0, 0, width, height);
-        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${light ? 0.03 : 0.05})`;
-        ctx.fillRect(0, 0, width, height);
-
-        const linkDist = isMobile ? 86 : 128;
-        for (let i = 0; i < particles.length; i += 1) {
-            const p = particles[i];
-            if (finePointer && pointerX) {
-                const dx = pointerX - p.x;
-                const dy = pointerY - p.y;
-                const dist = Math.hypot(dx, dy) || 1;
-                if (dist < 180) {
-                    p.vx += dx / dist * 0.012;
-                    p.vy += dy / dist * 0.012;
-                }
-            }
-            p.x += p.vx;
-            p.y += p.vy;
-            if (p.x < -10) p.x = width + 10;
-            if (p.x > width + 10) p.x = -10;
-            if (p.y < -10) p.y = height + 10;
-            if (p.y > height + 10) p.y = -10;
-            p.vx *= 0.995;
-            p.vy *= 0.995;
-
-            if (!isMobile) {
-                for (let j = i + 1; j < particles.length; j += 1) {
-                    const q = particles[j];
-                    const dx = p.x - q.x;
-                    const dy = p.y - q.y;
-                    const d2 = dx * dx + dy * dy;
-                    if (d2 < linkDist * linkDist) {
-                        const t = 1 - Math.sqrt(d2) / linkDist;
-                        ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${t * 0.22 * alpha})`;
-                        ctx.lineWidth = 1;
-                        ctx.beginPath();
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(q.x, q.y);
-                        ctx.stroke();
-                    }
-                }
-            }
-
-            ctx.beginPath();
-            ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${0.55 * alpha})`;
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fill();
+function setupPanelFx() {
+    const root = document.documentElement;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const apply = (event) => {
+        if (reduced.matches) {
+            root.style.setProperty("--fx-px", "0px");
+            root.style.setProperty("--fx-py", "0px");
+            return;
         }
-
-        if (Math.random() < 0.012) spawnSpark();
-        sparks = sparks.filter((s) => s.life > 0);
-        sparks.forEach((s) => {
-            ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${s.life * 0.9})`;
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            ctx.moveTo(s.x, s.y);
-            ctx.lineTo(s.x - s.vx * 6, s.y - s.vy * 6);
-            ctx.stroke();
-            s.x += s.vx;
-            s.y += s.vy;
-            s.life -= 0.016;
-        });
-
-        raf = requestAnimationFrame(tick);
+        const x = (event.clientX / window.innerWidth - 0.5) * 28;
+        const y = (event.clientY / window.innerHeight - 0.5) * 20;
+        root.style.setProperty("--fx-px", `${x.toFixed(1)}px`);
+        root.style.setProperty("--fx-py", `${y.toFixed(1)}px`);
     };
-
-    resize();
-    window.addEventListener("resize", resize);
-    document.addEventListener("visibilitychange", () => {
-        if (document.hidden) cancelAnimationFrame(raf);
-        else raf = requestAnimationFrame(tick);
-    });
-    raf = requestAnimationFrame(tick);
+    window.addEventListener("pointermove", apply, { passive: true });
 }
 
 function setupTheme() {
@@ -562,32 +503,43 @@ function setupAnchorScroll() {
     const reduceMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const sectionIds = new Set(["home", "about", "experience", "projects", "education", "certificates", "contact"]);
 
-    const go = (id, behavior) => {
+    const goSection = (id, behavior) => {
+        showMainSections();
         scrollToSection(id, behavior ?? (reduceMotion() ? "auto" : "smooth"));
+    };
+
+    const applyHash = (behavior) => {
+        const raw = decodeURIComponent((location.hash || "").replace(/^#/, ""));
+        const projectId = raw.startsWith("project/") ? raw.slice(8) : "";
+        if (projectId && PROJECTS[projectId]) {
+            openProjectPage(projectId, behavior ?? "auto");
+            return;
+        }
+        showMainSections();
+        if (sectionIds.has(raw)) {
+            scrollToSection(raw, behavior ?? (reduceMotion() ? "auto" : "smooth"));
+        }
     };
 
     document.addEventListener("click", (event) => {
         const link = event.target.closest('a[href^="#"]');
         if (!link || link.getAttribute("href") === "#") return;
-        const id = link.getAttribute("href").slice(1);
-        if (!sectionIds.has(id) || !document.getElementById(id)) return;
-        event.preventDefault();
-        go(id);
-        if (location.hash !== `#${id}`) {
-            history.pushState(null, "", `#${id}`);
+        const raw = link.getAttribute("href").slice(1);
+        const projectId = raw.startsWith("project/") ? raw.slice(8) : "";
+        if (projectId && PROJECTS[projectId]) {
+            event.preventDefault();
+            if (location.hash !== `#${raw}`) history.pushState(null, "", `#${raw}`);
+            openProjectPage(projectId, reduceMotion() ? "auto" : "smooth");
+            return;
         }
+        if (!sectionIds.has(raw) || !document.getElementById(raw)) return;
+        event.preventDefault();
+        if (location.hash !== `#${raw}`) history.pushState(null, "", `#${raw}`);
+        goSection(raw);
     });
 
-    window.addEventListener("popstate", () => {
-        const id = location.hash.slice(1);
-        if (sectionIds.has(id)) go(id, "auto");
-        else if (!id) go("home", "auto");
-    });
-
-    const initial = location.hash.slice(1);
-    if (sectionIds.has(initial)) {
-        requestAnimationFrame(() => go(initial, "auto"));
-    }
+    window.addEventListener("popstate", () => applyHash("auto"));
+    requestAnimationFrame(() => applyHash("auto"));
 }
 
 function setupNav() {
@@ -657,6 +609,10 @@ function setupScrollSpy() {
     };
 
     const update = () => {
+        if (document.body.classList.contains("is-project-view")) {
+            setActive("projects");
+            return;
+        }
         const probe = window.innerHeight * 0.32;
         let current = sections[0];
         for (const section of sections) {
@@ -676,7 +632,188 @@ function setupScrollSpy() {
     update();
 }
 
-function projectDialogHtml(id) {
+function escapeHtml(value) {
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+}
+
+function localized(value) {
+    if (!value) return "";
+    if (typeof value === "string") return value;
+    return value[lang] || value.en || "";
+}
+
+function projectImages(data) {
+    return (data.media || []).filter((item) => item.type === "image");
+}
+
+function applyProjectCovers() {
+    document.querySelectorAll("[data-project-thumb]").forEach((thumb) => {
+        if (thumb._carouselCleanup) thumb._carouselCleanup();
+        const data = PROJECTS[thumb.dataset.projectThumb];
+        const images = data ? projectImages(data) : [];
+        const cover = data?.cover || images[0]?.src || "";
+        thumb.querySelectorAll("img").forEach((img) => img.remove());
+        thumb.classList.toggle("has-cover", Boolean(cover));
+        if (!cover) return;
+
+        const img = document.createElement("img");
+        img.src = cover;
+        img.alt = "";
+        img.classList.add("is-active");
+        thumb.append(img);
+    });
+}
+
+function renderImageSlide(item, title, active) {
+    const caption = escapeHtml(localized(item.caption));
+    const alt = escapeHtml(localized(item.alt) || localized(item.caption) || title);
+    return `<button type="button" class="carousel-slide media-open${active ? " is-active" : ""}" data-full="${escapeHtml(item.src)}" data-alt="${alt}" aria-hidden="${active ? "false" : "true"}"><img src="${escapeHtml(item.src)}" alt="${alt}">${caption ? `<p class="hero-image-caption">${caption}</p>` : ""}</button>`;
+}
+
+function renderProjectMedia(data) {
+    const items = data.media || [];
+    if (!items.length) {
+        return `<div class="hero-placeholder">${t("addMedia")}</div>`;
+    }
+
+    const video = items.find((item) => item.type === "youtube" || item.type === "video");
+    const images = items.filter((item) => item.type === "image");
+    const title = t(data.titleKey);
+    let html = "";
+
+    if (video) {
+        const caption = escapeHtml(localized(video.caption));
+        const alt = escapeHtml(localized(video.alt) || localized(video.caption) || title);
+        if (video.type === "youtube") {
+            html += `<div class="hero-video"><div class="video-wrapper"><iframe src="${escapeHtml(video.src)}" title="${alt}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>${caption ? `<p class="hero-caption">${caption}</p>` : ""}</div>`;
+        } else {
+            const poster = video.poster ? ` poster="${escapeHtml(video.poster)}"` : "";
+            html += `<div class="hero-video"><video controls playsinline preload="metadata"${poster}><source src="${escapeHtml(video.src)}"></video>${caption ? `<p class="hero-caption">${caption}</p>` : ""}</div>`;
+        }
+    }
+
+    if (images.length === 1 && !video) {
+        const item = images[0];
+        const caption = escapeHtml(localized(item.caption));
+        const alt = escapeHtml(localized(item.alt) || localized(item.caption) || title);
+        html += `<div class="hero-image"><button type="button" class="media-open" data-full="${escapeHtml(item.src)}" data-alt="${alt}"><img src="${escapeHtml(item.src)}" alt="${alt}"></button>${caption ? `<p class="hero-image-caption">${caption}</p>` : ""}</div>`;
+        return html;
+    }
+
+    if (images.length > 1) {
+        const slides = images.map((item, index) => renderImageSlide(item, title, index === 0)).join("");
+        const dots = images.map((_, index) => `<button type="button" class="carousel-dot${index === 0 ? " is-active" : ""}" data-carousel-goto="${index}" aria-label="${t("slideN")} ${index + 1}"></button>`).join("");
+        html += `<div class="media-carousel" data-carousel>
+            <div class="carousel-viewport">${slides}</div>
+            <button type="button" class="carousel-nav prev" data-carousel-dir="-1" aria-label="${t("prevSlide")}"></button>
+            <button type="button" class="carousel-nav next" data-carousel-dir="1" aria-label="${t("nextSlide")}"></button>
+            <div class="carousel-dots">${dots}</div>
+        </div>`;
+    } else if (images.length === 1 && video) {
+        const item = images[0];
+        const caption = escapeHtml(localized(item.caption));
+        const alt = escapeHtml(localized(item.alt) || localized(item.caption) || title);
+        html += `<div class="hero-image"><button type="button" class="media-open" data-full="${escapeHtml(item.src)}" data-alt="${alt}"><img src="${escapeHtml(item.src)}" alt="${alt}"></button>${caption ? `<p class="hero-image-caption">${caption}</p>` : ""}</div>`;
+    }
+
+    return html || `<div class="hero-placeholder">${t("addMedia")}</div>`;
+}
+
+function prefersReducedMotion() {
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function stopCarousels(root) {
+    if (!root) return;
+    const nodes = [root, ...root.querySelectorAll("[data-carousel-bound]")];
+    nodes.forEach((el) => {
+        if (el._carouselCleanup) el._carouselCleanup();
+    });
+}
+
+function startCarousel(root, slideNodes) {
+    const slides = [...(slideNodes && slideNodes.length
+        ? slideNodes
+        : root.querySelectorAll(".carousel-slide"))];
+    if (slides.length < 2) return;
+    if (root._carouselCleanup) root._carouselCleanup();
+
+    const dots = [...root.querySelectorAll("[data-carousel-goto]")];
+    let index = 0;
+    let timer = null;
+
+    const show = (next) => {
+        index = (next + slides.length) % slides.length;
+        slides.forEach((slide, i) => {
+            slide.classList.toggle("is-active", i === index);
+            if (slide.hasAttribute("aria-hidden")) slide.setAttribute("aria-hidden", String(i !== index));
+        });
+        dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
+    };
+
+    const play = () => {
+        stop();
+        if (prefersReducedMotion() || document.hidden) return;
+        timer = setInterval(() => show(index + 1), CAROUSEL_MS);
+        carouselTimers.add(timer);
+    };
+
+    const stop = () => {
+        if (timer) {
+            clearInterval(timer);
+            carouselTimers.delete(timer);
+            timer = null;
+        }
+    };
+
+    const onDir = (event) => {
+        const btn = event.target.closest("[data-carousel-dir]");
+        if (!btn || !root.contains(btn)) return;
+        show(index + Number(btn.dataset.carouselDir));
+        play();
+    };
+
+    const onDot = (event) => {
+        const btn = event.target.closest("[data-carousel-goto]");
+        if (!btn || !root.contains(btn)) return;
+        show(Number(btn.dataset.carouselGoto));
+        play();
+    };
+
+    const onEnter = () => stop();
+    const onLeave = () => play();
+    const onVisibility = () => (document.hidden ? stop() : play());
+
+    root.addEventListener("click", onDir);
+    root.addEventListener("click", onDot);
+    root.addEventListener("mouseenter", onEnter);
+    root.addEventListener("mouseleave", onLeave);
+    root.addEventListener("focusin", onEnter);
+    root.addEventListener("focusout", onLeave);
+    document.addEventListener("visibilitychange", onVisibility);
+
+    root.dataset.carouselBound = "true";
+    root._carouselCleanup = () => {
+        stop();
+        root.removeEventListener("click", onDir);
+        root.removeEventListener("click", onDot);
+        root.removeEventListener("mouseenter", onEnter);
+        root.removeEventListener("mouseleave", onLeave);
+        root.removeEventListener("focusin", onEnter);
+        root.removeEventListener("focusout", onLeave);
+        document.removeEventListener("visibilitychange", onVisibility);
+        delete root.dataset.carouselBound;
+        delete root._carouselCleanup;
+    };
+
+    play();
+}
+
+function projectPageHtml(id) {
     const data = PROJECTS[id];
     const links = [];
     if (data.github) {
@@ -685,69 +822,136 @@ function projectDialogHtml(id) {
     if (data.demo) {
         links.push(`<a class="btn btn-secondary" href="${data.demo}" target="_blank" rel="noopener noreferrer">${t(data.demoKey)}</a>`);
     }
+
+    const features = (data.features?.[lang] || data.features?.en || []).map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+    const tech = (data.tech || []).map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+    const time = data.timeline || {};
+    const timeRows = [
+        time.start ? `<div class="timeline-item"><span>${t("startLabel")}</span><span>${escapeHtml(localized(time.start))}</span></div>` : "",
+        time.end ? `<div class="timeline-item"><span>${t("endLabel")}</span><span>${escapeHtml(localized(time.end))}</span></div>` : "",
+        time.duration ? `<div class="timeline-item"><span>${t("durationLabel")}</span><span>${escapeHtml(localized(time.duration))}</span></div>` : ""
+    ].join("");
+
     return `
-        <h3>${t("ctxProblem")}</h3>
-        <p>${data.context[lang]}</p>
-        <h3>${t("role")}</h3>
-        <p>${data.role[lang]}</p>
-        <h3>${t("stack")}</h3>
-        <p>${data.stack}</p>
-        <h3>${t("impact")}</h3>
-        <p>${data.impact[lang]}</p>
-        <div class="dialog-links">${links.join("")}</div>
+        <div class="project-detail-grid">
+            <div class="project-detail-main">
+                <section class="detail-card">
+                    <h3>${t("ctxProblem")}</h3>
+                    <p>${data.context[lang]}</p>
+                </section>
+                <section class="detail-card">
+                    <h3>${t("role")}</h3>
+                    <p>${data.role[lang]}</p>
+                </section>
+                ${data.approach ? `<section class="detail-card"><h3>${t("approachTitle")}</h3><p>${data.approach[lang]}</p></section>` : ""}
+                ${features ? `<section class="detail-card"><h3>${t("featuresTitle")}</h3><ul class="detail-list">${features}</ul></section>` : ""}
+                <section class="detail-card">
+                    <h3>${t("impact")}</h3>
+                    <p>${data.impact[lang]}</p>
+                </section>
+            </div>
+            <aside class="project-detail-side">
+                ${timeRows ? `<section class="detail-card"><div class="timeline-summary">${timeRows}</div></section>` : ""}
+                ${tech ? `<section class="detail-card"><h3>${t("techUsed")}</h3><ul class="chip-list compact">${tech}</ul></section>` : `<section class="detail-card"><h3>${t("stack")}</h3><p>${data.stack}</p></section>`}
+            </aside>
+        </div>
+        ${links.length ? `<div class="project-page-links"><h3>${t("relatedLinks")}</h3><div class="link-row">${links.join("")}</div></div>` : ""}
     `;
 }
 
-function fillProjectDialog(id) {
-    const data = PROJECTS[id];
-    const dialog = document.getElementById("project-dialog");
-    if (!data || !dialog) return;
-    document.getElementById("dialog-kicker").textContent = t(data.kickerKey);
-    document.getElementById("dialog-title").textContent = t(data.titleKey);
-    document.getElementById("dialog-body").innerHTML = projectDialogHtml(id);
-}
-
-function openProject(id, opener) {
-    const dialog = document.getElementById("project-dialog");
-    if (!PROJECTS[id] || !dialog) return;
-    openProjectId = id;
-    lastDialogOpener = opener || document.activeElement;
-    fillProjectDialog(id);
-    if (typeof dialog.showModal === "function") dialog.showModal();
-}
-
-function setupProjectDialog() {
-    const dialog = document.getElementById("project-dialog");
-    const closeBtn = dialog?.querySelector("[data-close-dialog]");
-
-    document.querySelectorAll("[data-project]").forEach((button) => {
-        button.addEventListener("click", (event) => {
-            event.stopPropagation();
-            openProject(button.dataset.project, button);
-        });
+function showMainSections() {
+    document.body.classList.remove("is-project-view");
+    document.querySelectorAll("main > .panel").forEach((panel) => {
+        panel.hidden = panel.id === "project-page";
     });
+    document.querySelectorAll("#project-page video, #project-page iframe").forEach((el) => {
+        if (el.tagName === "VIDEO") {
+            el.pause();
+            el.currentTime = 0;
+        } else {
+            el.src = el.src;
+        }
+    });
+    stopCarousels(document.getElementById("project-page-media"));
+    openProjectId = null;
+    document.title = lang === "zh" ? "張翊禾 — AI 工程師" : "Yi-Ho Chang — AI Engineer";
+}
+
+function fillProjectPage(id) {
+    const data = PROJECTS[id];
+    const page = document.getElementById("project-page");
+    if (!data || !page) return;
+    openProjectId = id;
+    document.getElementById("project-page-kicker").textContent = t(data.kickerKey);
+    document.getElementById("project-page-title").textContent = t(data.titleKey);
+    const media = document.getElementById("project-page-media");
+    stopCarousels(media);
+    const html = renderProjectMedia(data);
+    media.innerHTML = html;
+    media.hidden = false;
+    media.querySelectorAll("[data-carousel]").forEach((el) => {
+        startCarousel(el, el.querySelectorAll(".carousel-slide"));
+    });
+    document.getElementById("project-page-body").innerHTML = projectPageHtml(id);
+    document.title = `${t(data.titleKey)} — ${t("heroName")}`;
+}
+
+function openProjectPage(id, behavior) {
+    if (!PROJECTS[id]) return;
+    document.body.classList.add("is-project-view");
+    document.querySelectorAll("main > .panel").forEach((panel) => {
+        panel.hidden = panel.id !== "project-page";
+    });
+    fillProjectPage(id);
+    window.scrollTo({ top: 0, left: 0, behavior: behavior || "auto" });
+}
+
+function setupProjectPage() {
+    applyProjectCovers();
+    const mediaDialog = document.getElementById("media-dialog");
+    const mediaImg = document.getElementById("media-dialog-img");
+    const closeMedia = mediaDialog?.querySelector("[data-close-media]");
 
     document.querySelectorAll("[data-project-card]").forEach((card) => {
         card.addEventListener("click", (event) => {
             if (event.target.closest("a, button")) return;
-            openProject(card.dataset.projectCard, card);
+            const id = card.dataset.projectCard;
+            if (!PROJECTS[id]) return;
+            if (location.hash !== `#project/${id}`) history.pushState(null, "", `#project/${id}`);
+            openProjectPage(id);
         });
         card.addEventListener("keydown", (event) => {
             if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault();
-                openProject(card.dataset.projectCard, card);
+                card.querySelector('a[href^="#project/"]')?.click();
             }
         });
     });
 
-    const close = () => dialog?.close();
-    closeBtn?.addEventListener("click", close);
-    dialog?.addEventListener("click", (event) => {
-        if (event.target === dialog) close();
+    document.getElementById("project-page-media")?.addEventListener("click", (event) => {
+        const opener = event.target.closest(".media-open");
+        if (!opener || !mediaDialog || !mediaImg) return;
+        mediaImg.src = opener.dataset.full;
+        mediaImg.alt = opener.dataset.alt || "";
+        if (typeof mediaDialog.showModal === "function") mediaDialog.showModal();
     });
-    dialog?.addEventListener("close", () => {
-        openProjectId = null;
-        lastDialogOpener?.focus?.();
+
+    const close = () => mediaDialog?.close();
+    closeMedia?.addEventListener("click", close);
+    mediaDialog?.addEventListener("click", (event) => {
+        if (event.target === mediaDialog) close();
+    });
+    mediaDialog?.addEventListener("close", () => {
+        if (mediaImg) mediaImg.src = "";
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key !== "Escape" || mediaDialog?.open) return;
+        if (!document.body.classList.contains("is-project-view")) return;
+        history.pushState(null, "", "#projects");
+        showMainSections();
+        applyI18n();
+        scrollToSection("projects", "auto");
     });
 }
 
