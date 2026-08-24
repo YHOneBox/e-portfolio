@@ -52,7 +52,6 @@ const I18N = {
         durationLabel: "Duration",
         featuresTitle: "Key features",
         techUsed: "Tech stack",
-        relatedLinks: "Links",
         approachTitle: "Method",
         p1Kicker: "Jun 2026 – Present",
         p1Title: "Interactive AI Avatar",
@@ -111,14 +110,9 @@ const I18N = {
         formActivate: "Check Gmail (and spam) for a FormSubmit email, click Activate Form, then send again.",
         formFailed: "Could not send right now. Email me at onebox663269@gmail.com, or try again.",
         footer: "Built for the web, hosted on GitHub Pages.",
-        closeCase: "Close case study",
         ctxProblem: "Context & problem",
         role: "My role & contributions",
-        stack: "Technical stack",
         impact: "Impact & results",
-        watchDemo: "Watch demo",
-        watchPlay: "Watch gameplay",
-        githubRepo: "GitHub repository",
         prevSlide: "Previous image",
         nextSlide: "Next image",
         slideN: "Show image"
@@ -172,7 +166,6 @@ const I18N = {
         durationLabel: "總時長",
         featuresTitle: "主要功能",
         techUsed: "使用技術",
-        relatedLinks: "相關連結",
         approachTitle: "方法",
         p1Kicker: "2026/6 – 至今",
         p1Title: "Interactive AI Avatar",
@@ -231,14 +224,9 @@ const I18N = {
         formActivate: "請到 Gmail（含垃圾郵件）點開 FormSubmit 的啟用信，再送一次。",
         formFailed: "目前無法送出。請改寄 onebox663269@gmail.com，或稍後再試。",
         footer: "為網頁打造，托管於 GitHub Pages。",
-        closeCase: "關閉案例",
         ctxProblem: "脈絡與問題",
         role: "角色與貢獻",
-        stack: "技術棧",
         impact: "影響與成果",
-        watchDemo: "觀看演示",
-        watchPlay: "觀看遊玩",
-        githubRepo: "GitHub 儲存庫",
         prevSlide: "上一張",
         nextSlide: "下一張",
         slideN: "顯示圖片"
@@ -282,7 +270,6 @@ const PROJECTS = {
                 "TTS，並即時對齊 lip-sync 與 gesture"
             ]
         },
-        stack: "ASR, NLP, multimodal LLM, TTS, realtime APIs, avatar rendering.",
         tech: ["ASR", "NLP", "Multimodal LLM", "TTS", "Secure API Gateway", "Avatar rendering"],
         timeline: { start: { en: "Jun 2026", zh: "2026/6" }, end: { en: "Present", zh: "至今" }, duration: { en: "Ongoing", zh: "進行中" } },
         impact: {
@@ -325,7 +312,6 @@ const PROJECTS = {
                 "Suggest 與 Search 工具；支援 Gemini、OpenAI、Claude 或 OpenAI-compatible 端點，並可備援"
             ]
         },
-        stack: "LINE Messaging API, multi-provider LLM routing, lexical RAG, FastAPI, SQLite.",
         tech: ["LINE Messaging API", "Gemini", "OpenAI", "Claude", "RAG", "WebSocket desk", "SQLite"],
         timeline: { start: { en: "May 2026", zh: "2026/5" }, end: { en: "Present", zh: "至今" }, duration: { en: "Ongoing", zh: "進行中" } },
         impact: {
@@ -369,7 +355,6 @@ const PROJECTS = {
                 "Early stopping（patience 100，最多 1,000 個 epoch）"
             ]
         },
-        stack: "YOLO26, Python, LabelMe, drone RGB tiles.",
         tech: ["YOLO26", "Python", "LabelMe", "OpenCV", "Drone RGB"],
         timeline: { start: { en: "Jan 2026", zh: "2026/1" }, end: { en: "Mar 2026", zh: "2026/3" }, duration: { en: "3 months", zh: "3個月" } },
         impact: {
@@ -933,14 +918,6 @@ function startCarousel(root, slideNodes) {
 
 function projectPageHtml(id) {
     const data = PROJECTS[id];
-    const links = [];
-    if (data.github) {
-        links.push(`<a class="btn btn-primary" href="${data.github}" target="_blank" rel="noopener noreferrer">${t("githubRepo")}</a>`);
-    }
-    if (data.demo) {
-        links.push(`<a class="btn btn-secondary" href="${data.demo}" target="_blank" rel="noopener noreferrer">${t(data.demoKey)}</a>`);
-    }
-
     const features = (data.features?.[lang] || data.features?.en || []).map((item) => `<li>${escapeHtml(item)}</li>`).join("");
     const tech = (data.tech || []).map((item) => `<li>${escapeHtml(item)}</li>`).join("");
     const time = data.timeline || {};
@@ -970,10 +947,9 @@ function projectPageHtml(id) {
             </div>
             <aside class="project-detail-side">
                 ${timeRows ? `<section class="detail-card"><div class="timeline-summary">${timeRows}</div></section>` : ""}
-                ${tech ? `<section class="detail-card"><h3>${t("techUsed")}</h3><ul class="chip-list compact">${tech}</ul></section>` : `<section class="detail-card"><h3>${t("stack")}</h3><p>${data.stack}</p></section>`}
+                ${tech ? `<section class="detail-card"><h3>${t("techUsed")}</h3><ul class="chip-list compact">${tech}</ul></section>` : ""}
             </aside>
         </div>
-        ${links.length ? `<div class="project-page-links"><h3>${t("relatedLinks")}</h3><div class="link-row">${links.join("")}</div></div>` : ""}
     `;
 }
 
