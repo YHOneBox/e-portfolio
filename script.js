@@ -1,3 +1,7 @@
+if (new URLSearchParams(location.search).get("preview") === "1") {
+    document.documentElement.classList.add("is-preview-embed");
+}
+
 const I18N = {
     en: {
         skip: "Skip to main content",
@@ -88,6 +92,7 @@ const I18N = {
         certLede: "Completed coursework in generative artificial intelligence and machine learning.",
         cert1Meta: "DeepLearning.AI · AWS · Feb 2025",
         cert2Meta: "IBM · Jan 2025",
+        openCert: "Open credential",
         contactEyebrow: "Contact",
         contactTitle: "Contact",
         contactLede: "Please write with inquiries regarding positions, collaboration, or technical discussion. Correspondence is reviewed directly.",
@@ -170,14 +175,14 @@ const I18N = {
         relatedLinks: "相關連結",
         approachTitle: "方法",
         p1Kicker: "2026/6 – 至今",
-        p1Title: "互動式 AI 虛擬人",
-        p1Summary: "端到端多模態虛擬人系統。語音、文字與視覺輸入經低延遲介面與 API 閘道，進入 ASR、NLP 與多模態 LLM，再以同步語音與動畫輸出。",
+        p1Title: "Interactive AI Avatar",
+        p1Summary: "端到端多模態 avatar 系統。語音、文字與視覺輸入經低延遲介面與 API gateway，進入 ASR、NLP 與多模態 LLM，再以同步語音與動畫輸出。",
         p2Kicker: "2026/5 – 至今",
-        p2Title: "官方帳號管理系統",
-        p2Summary: "可自架之 LINE 官方帳號管理系統，整合進線、人工接管、自動回覆、知識檢索與草稿產生。訊息僅在明確確認後送出。",
+        p2Title: "LINE Official Account Manager",
+        p2Summary: "可自架之 LINE Official Account 管理系統，整合進線、人工接管、自動回覆、知識檢索與草稿產生。訊息僅在明確確認後送出。",
         p3Kicker: "2026/1 – 2026/3",
-        p3Title: "精準農業雜草偵測",
-        p3Summary: "以 YOLO26 於多年生黑麥草與高羊茅之高解析無人機影像進行雜草物件偵測，並以控制實驗比較拼貼與輸入解析度。",
+        p3Title: "Precision Agriculture Weed Detection",
+        p3Summary: "以 YOLO26 於 Perennial Rye 與 Tall Fescue 之高解析無人機影像進行雜草物件偵測，並以控制實驗比較拼貼與輸入解析度。",
         ctaResumePdf: "下載履歷（PDF）",
         eduEyebrow: "學歷",
         eduTitle: "教育背景",
@@ -199,7 +204,7 @@ const I18N = {
         exp3Title: "AI 實習生 · Claireye Intelligence",
         exp3Meta: "2024/7 – 2024/8 · CNN、YOLO",
         exp3Body: "參與電腦視覺與 LLM 產品開發，包含影像辨識、與研發單位協作網頁與應用介面，並依使用者回饋提升前端穩定度。",
-        exp4Title: "AI 邊緣課程 · 工研院",
+        exp4Title: "AI Edge Course · ITRI",
         exp4Meta: "2024/7 – 2024/8 · NVIDIA Jetson",
         exp4Body: "為產業工程師規劃並講授邊緣 AI 課程，內容包含 Linux、DeepStream SDK、Docker 與 Azure IoT Edge 於 NVIDIA Jetson 平台。",
         certEyebrow: "證照",
@@ -207,6 +212,7 @@ const I18N = {
         certLede: "生成式人工智慧與機器學習相關課程證書。",
         cert1Meta: "DeepLearning.AI · AWS · 2025/2",
         cert2Meta: "IBM · 2025/1",
+        openCert: "開啟證書",
         contactEyebrow: "聯絡",
         contactTitle: "聯絡",
         contactLede: "如有職缺、合作或技術討論，歡迎來信。來件將直接審閱。",
@@ -245,20 +251,20 @@ const PROJECTS = {
         titleKey: "p1Title",
         cover: "files/projects/avatar/Realtime_ai_avatar.jpg",
         media: [
-            { type: "image", src: "files/projects/avatar/Realtime_ai_avatar.jpg", alt: { en: "Interactive AI avatar UI", zh: "互動式 AI 虛擬人介面" }, caption: { en: "Live camera, avatar, voice meter, and conversation in one UI", zh: "鏡頭、虛擬人、語音偵測與對話同屏" } },
-            { type: "image", src: "files/projects/avatar/visual.png", alt: { en: "Architecture and interaction flow diagram", zh: "架構與互動流程圖" }, caption: { en: "Speech, text, and vision through API, multimodal LLM, TTS, and avatar rendering", zh: "語音、文字與視覺經 API、多模態 LLM、TTS 到虛擬人渲染" } }
+            { type: "image", src: "files/projects/avatar/Realtime_ai_avatar.jpg", alt: { en: "Interactive AI avatar UI", zh: "Interactive AI Avatar 介面" }, caption: { en: "Live camera, avatar, voice meter, and conversation in one UI", zh: "鏡頭、avatar、語音偵測與對話同屏" } },
+            { type: "image", src: "files/projects/avatar/visual.png", alt: { en: "Architecture and interaction flow diagram", zh: "架構與互動流程圖" }, caption: { en: "Speech, text, and vision through API, multimodal LLM, TTS, and avatar rendering", zh: "語音、文字與視覺經 API、multimodal LLM、TTS 到 avatar rendering" } }
         ],
         context: {
             en: "This project implements a real-time interactive avatar that accepts speech, text, and visual input within a single interface and returns a low-latency spoken, animated response, rather than a delayed text-only chatbot.",
-            zh: "本專案實作即時互動虛擬人：於單一介面接收語音、文字與視覺輸入，並以低延遲之語音與動畫回覆，而非延遲的純文字聊天機器人。"
+            zh: "本專案實作即時 Interactive AI Avatar：於單一介面接收語音、文字與視覺輸入，並以低延遲之語音與動畫回覆，而非延遲的純文字 chatbot。"
         },
         role: {
             en: "I designed the architecture and interaction flow: capture on kiosk, desktop, or mobile devices; a secure API gateway; a multimodal backend; and text-to-speech with avatar animation. Emphasis was placed on scalable API and user-interface deployment in order to preserve real-time performance under load.",
-            zh: "我負責架構與互動流程：於互動亭、桌機或行動裝置擷取輸入；經安全 API 閘道進入多模態後端；再進行語音合成與虛擬人動畫。重點在於可擴充之 API 與介面部署，以在負載下維持即時效能。"
+            zh: "我負責架構與互動流程：於 kiosk、桌機或行動裝置擷取輸入；經 secure API gateway 進入多模態後端；再進行 TTS 與 avatar animation。重點在於可擴充之 API 與介面部署，以在負載下維持即時效能。"
         },
         approach: {
             en: "Requests are captured and encoded in the user-interface layer, then routed through a secure API gateway. The backend performs automatic speech recognition, natural-language processing, multimodal LLM fusion of text, audio, and video, and conversation-context management. Formatted replies are delivered to text-to-speech and avatar rendering so that lip synchronization and gesture remain aligned with audio.",
-            zh: "請求於使用者介面層擷取並編碼，再經安全 API 閘道路由。後端執行自動語音辨識、自然語言處理、文字／音訊／影像之多模態 LLM 融合，以及對話脈絡管理。格式化回覆送至語音合成與虛擬人渲染，使口型與手勢與音訊對齊。"
+            zh: "請求於使用者介面層擷取並編碼，再經 secure API gateway 路由。後端執行 ASR、NLP、文字／音訊／影像之 multimodal LLM fusion，以及 conversation-context management。格式化回覆送至 TTS 與 avatar rendering，使 lip-sync 與 gesture 與音訊對齊。"
         },
         features: {
             en: [
@@ -270,10 +276,10 @@ const PROJECTS = {
             ],
             zh: [
                 "語音、文字與即時視覺輸入",
-                "互動亭、桌機與行動裝置上之低延遲擷取",
-                "安全 API 閘道，支援可擴充之 API 與介面部署",
-                "多模態引擎：ASR、NLP、LLM 融合與對話脈絡",
-                "語音合成，並即時對齊口型與手勢"
+                "kiosk、桌機與行動裝置上之低延遲擷取",
+                "Secure API Gateway，支援可擴充之 API 與介面部署",
+                "Multimodal engine：ASR、NLP、LLM fusion 與 conversation context",
+                "TTS，並即時對齊 lip-sync 與 gesture"
             ]
         },
         stack: "ASR, NLP, multimodal LLM, TTS, realtime APIs, avatar rendering.",
@@ -289,7 +295,7 @@ const PROJECTS = {
         titleKey: "p2Title",
         cover: "files/projects/line/line_system.jpg",
         media: [
-            { type: "image", src: "files/projects/line/line_system.jpg", alt: { en: "LINE Official Account Manager chat desk", zh: "官方帳號管理系統聊天工作台" }, caption: { en: "Chat desk with AI knowledge, suggest, and search", zh: "聊天工作台：知識庫、AI 建議與搜尋" } }
+            { type: "image", src: "files/projects/line/line_system.jpg", alt: { en: "LINE Official Account Manager chat desk", zh: "LINE Official Account Manager 聊天工作台" }, caption: { en: "Chat desk with AI knowledge, suggest, and search", zh: "聊天工作台：知識庫、AI Suggest 與 Search" } }
         ],
         context: {
             en: "LINE is the primary messaging channel for many users. This project provides a private operations console that combines inbound messages, human replies, and automated assistance, with isolated accounts, no public registration, and no outbound draft until an operator confirms transmission.",
@@ -297,11 +303,11 @@ const PROJECTS = {
         },
         role: {
             en: "I designed a self-hosted LINE Official Account console with isolated accounts. Each account is assigned a dedicated webhook, encrypted channel credentials, and imported language-model keys with explicit routing. Automatic reply, suggestion, and search are independent tasks, each with its own credentials, models, and fallbacks.",
-            zh: "我設計可自架、帳號隔離之 LINE 官方帳號工作台。各帳號具備專屬 webhook、加密頻道憑證，以及可明確指定路由之語言模型金鑰。自動回覆、建議與搜尋為獨立任務，金鑰、模型與備援可分別設定。"
+            zh: "我設計可自架、帳號隔離之 LINE Official Account 工作台。各帳號具備專屬 webhook、加密頻道憑證，以及可明確指定路由之語言模型金鑰。自動回覆、Suggest 與 Search 為獨立任務，金鑰、模型與備援可分別設定。"
         },
         approach: {
             en: "Inbound LINE events are signature-verified, persisted, and broadcast to the console. In automated mode, keyword rules are evaluated first; remaining text is debounced, retrieved against contact-scoped knowledge (lexical RAG over PDF, text, Markdown, and Word documents), and returned by push message. Human mode disables the language model. Suggestion drafts a reply; search answers from the transcript. Neither function transmits to LINE until send is confirmed.",
-            zh: "進線事件經簽章驗證後入庫，並推播至工作台。自動化模式下先比對關鍵字規則；其餘文字經合併等待，並以聯絡人範圍之知識庫（PDF、純文字、Markdown、Word 之詞彙檢索）產生回覆後推播。人工模式不呼叫語言模型。建議功能產生草稿；搜尋僅依據對話紀錄。兩者皆須確認傳送始送至 LINE。"
+            zh: "進線事件經簽章驗證後入庫，並推播至工作台。自動化模式下先比對關鍵字規則；其餘文字經合併等待，並以聯絡人範圍之知識庫（PDF、純文字、Markdown、Word 之 lexical RAG）產生回覆後推播。人工模式不呼叫語言模型。Suggest 功能產生草稿；Search 僅依據對話紀錄。兩者皆須確認傳送始送至 LINE。"
         },
         features: {
             en: [
@@ -314,9 +320,9 @@ const PROJECTS = {
             zh: [
                 "管理與營運畫面分離，帳號資料互不可見",
                 "各對話可採自動化或人工處理；關閉瀏覽器不中斷 webhook",
-                "關鍵字規則處理既定回覆，並設頻率限制與合併等待",
+                "關鍵字規則處理既定回覆，並設頻率限制與 debounce",
                 "共用與單人知識文件，供有根據之生成",
-                "建議與搜尋工具；支援 Gemini、OpenAI、Claude 或相容端點，並可備援"
+                "Suggest 與 Search 工具；支援 Gemini、OpenAI、Claude 或 OpenAI-compatible 端點，並可備援"
             ]
         },
         stack: "LINE Messaging API, multi-provider LLM routing, lexical RAG, FastAPI, SQLite.",
@@ -337,7 +343,7 @@ const PROJECTS = {
         ],
         context: {
             en: "This work was completed as the AI-535 Deep Learning final project with Tz-Jie Dai and Yu-Yu Chiang, under the instruction of Fuxin Li. The objective was to detect weeds mixed into crop rows from drone RGB imagery, rather than from laboratory photographs. The dataset comprised 171 LabelMe-annotated frames of approximately 6,000 by 5,000–6,000 pixels from perennial ryegrass and tall fescue fields.",
-            zh: "本工作為 AI-535 深度學習期末專案，與戴子傑、蔣雨諭共同完成，指導教師為 Fuxin Li。目標為自無人機 RGB 影像中，於實際作物行列偵測雜草，而非實驗室拍攝影像。資料集為 171 張 LabelMe 標註畫面，解析度約 6,000 × 5,000–6,000 像素，取自多年生黑麥草與高羊茅田。"
+            zh: "本工作為 AI-535 Deep Learning 期末專案，與 Tz-Jie Dai、Yu-Yu Chiang 共同完成，指導教授為 Fuxin Li。目標為自無人機 RGB 影像中，於實際作物行列偵測雜草，而非實驗室拍攝影像。資料集為 171 張 LabelMe 標註畫面，解析度約 6,000 × 5,000–6,000 像素，取自 Perennial Rye 與 Tall Fescue 田區。"
         },
         role: {
             en: "I developed the detection pipeline: converting polygons to YOLO bounding boxes, tiling large orthophotos so that a detector could be trained, and comparing training configurations. Bounding boxes that straddled tile boundaries were a principal failure mode; each box was therefore assigned to the tile containing its center.",
@@ -345,7 +351,7 @@ const PROJECTS = {
         },
         approach: {
             en: "YOLO26n was trained under GPU memory constraints (the s and m variants showed no material gain), comparing tiling with crop, tiling with center anchoring, and scale-and-pad, at 640, 1,280, and 2,560 pixels (5,120 exhausted video memory). Separate training on ryegrass versus fescue, compared with a merged set, produced little difference on the training split and a modest test gain for the unified model. Performance peaked at 1,280 pixels; 2,560 pixels failed because labels became too small relative to the frame.",
-            zh: "於 GPU 記憶體限制下訓練 YOLO26n（s 與 m 無明顯增益），比較切塊裁切、切塊中心錨定與縮放補邊，以及 640、1,280、2,560 像素（5,120 顯存不足）。黑麥草與羊茅分開訓練相對於合併訓練，於訓練集差異不大，合併模型於測試集略優。1,280 像素表現最佳；2,560 像素失效，因標註相對整張影像過小。"
+            zh: "於 GPU 記憶體限制下訓練 YOLO26n（s 與 m 無明顯增益），比較 tiling with crop、tiling with center anchoring 與 scale-and-pad，以及 640、1,280、2,560 像素（5,120 顯存不足）。Perennial Rye 與 Tall Fescue 分開訓練相對於合併訓練，於訓練集差異不大，合併模型於測試集略優。1,280 像素表現最佳；2,560 像素失效，因標註相對整張影像過小。"
         },
         features: {
             en: [
@@ -356,11 +362,11 @@ const PROJECTS = {
                 "Early stopping (patience 100, maximum 1,000 epochs)"
             ],
             zh: [
-                "171 張無人機影像、兩種作物、由 LabelMe 多邊形轉換之雜草類別",
-                "切塊並以中心錨定，避免邊界框被切碎",
+                "171 張無人機影像、Perennial Rye 與 Tall Fescue、由 LabelMe 多邊形轉換之雜草類別",
+                "切塊並以中心錨定，避免 YOLO bounding box 被切碎",
                 "解析度比較：640、1,280、2,560 像素",
                 "合併與分田訓練以評估泛化",
-                "早停訓練（patience 100，最多 1,000 個 epoch）"
+                "Early stopping（patience 100，最多 1,000 個 epoch）"
             ]
         },
         stack: "YOLO26, Python, LabelMe, drone RGB tiles.",
@@ -368,7 +374,7 @@ const PROJECTS = {
         timeline: { start: { en: "Jan 2026", zh: "2026/1" }, end: { en: "Mar 2026", zh: "2026/3" }, duration: { en: "3 months", zh: "3個月" } },
         impact: {
             en: "Tiling with center anchoring outperformed naive cropping by a small margin. Scale-and-pad appeared strong during training but overfit. No configuration dominated all metrics; tile size should match weed scale. The practical operating point was 1,280-pixel tiles with merged data. The strongest test loop reached 93% detection.",
-            zh: "切塊中心錨定略優於直接裁切。縮放補邊於訓練階段表現較佳，但有過擬合。無單一設定全面勝出；拼貼尺寸應對應雜草尺度。實務操作點為 1,280 像素拼貼加合併資料。最佳測試迴圈達 93% 偵測率。"
+            zh: "切塊中心錨定略優於直接裁切。Scale-and-pad 於訓練階段表現較佳，但有過擬合。無單一設定全面勝出；拼貼尺寸應對應雜草尺度。實務操作點為 1,280 像素拼貼加合併資料。最佳測試迴圈達 93% 偵測率。"
         }
     }
 };
@@ -445,6 +451,9 @@ document.addEventListener("DOMContentLoaded", () => {
     setupPanelFx();
     setupProjectPage();
     setupContactForm();
+    if (!document.documentElement.classList.contains("is-preview-embed")) {
+        setupHoverPreviews();
+    }
 });
 
 function setupPanelFx() {
@@ -652,14 +661,12 @@ function projectImages(data) {
 
 function applyProjectCovers() {
     document.querySelectorAll("[data-project-thumb]").forEach((thumb) => {
-        if (thumb._carouselCleanup) thumb._carouselCleanup();
         const data = PROJECTS[thumb.dataset.projectThumb];
         const images = data ? projectImages(data) : [];
         const cover = data?.cover || images[0]?.src || "";
-        thumb.querySelectorAll("img").forEach((img) => img.remove());
+        thumb.querySelectorAll("img").forEach((el) => el.remove());
         thumb.classList.toggle("has-cover", Boolean(cover));
         if (!cover) return;
-
         const img = document.createElement("img");
         img.src = cover;
         img.alt = "";
@@ -668,10 +675,119 @@ function applyProjectCovers() {
     });
 }
 
+function setupHoverPreviews() {
+    const pop = document.getElementById("hover-preview");
+    const frame = document.getElementById("hover-preview-frame");
+    const urlLabel = document.getElementById("hover-preview-url");
+    if (!pop || !frame) return;
+    if (window.matchMedia("(hover: none)").matches) return;
+
+    let showTimer = 0;
+    let hideTimer = 0;
+    let currentSrc = "";
+
+    const encodePath = (path) => path.split("/").map((part) => encodeURIComponent(part)).join("/");
+
+    const hide = () => {
+        clearTimeout(showTimer);
+        pop.hidden = true;
+        pop.setAttribute("aria-hidden", "true");
+        pop.classList.remove("is-file");
+        frame.src = "about:blank";
+        currentSrc = "";
+        document.querySelectorAll(".is-previewing").forEach((el) => el.classList.remove("is-previewing"));
+    };
+
+    const place = (anchor) => {
+        const rect = anchor.getBoundingClientRect();
+        const gap = 14;
+        const width = pop.offsetWidth || 352;
+        const height = pop.offsetHeight || 260;
+        let left = rect.right + gap;
+        let top = rect.top;
+        if (left + width > window.innerWidth - 12) left = rect.left - width - gap;
+        if (left < 12) left = Math.max(12, (window.innerWidth - width) / 2);
+        if (top + height > window.innerHeight - 12) top = window.innerHeight - height - 12;
+        if (top < 12) top = 12;
+        pop.style.left = `${Math.round(left)}px`;
+        pop.style.top = `${Math.round(top)}px`;
+    };
+
+    const show = (anchor, src, label, isFile) => {
+        clearTimeout(hideTimer);
+        document.querySelectorAll(".is-previewing").forEach((el) => el.classList.remove("is-previewing"));
+        anchor.classList.add("is-previewing");
+        pop.classList.toggle("is-file", Boolean(isFile));
+        if (urlLabel) urlLabel.textContent = label;
+        if (src !== currentSrc) {
+            currentSrc = src;
+            frame.src = src;
+        }
+        pop.hidden = false;
+        pop.setAttribute("aria-hidden", "false");
+        place(anchor);
+    };
+
+    const scheduleShow = (anchor, src, label, isFile) => {
+        clearTimeout(hideTimer);
+        clearTimeout(showTimer);
+        showTimer = window.setTimeout(() => show(anchor, src, label, isFile), 160);
+    };
+
+    const scheduleHide = () => {
+        clearTimeout(showTimer);
+        hideTimer = window.setTimeout(hide, 80);
+    };
+
+    const bind = (el, src, label, isFile) => {
+        el.addEventListener("pointerenter", () => scheduleShow(el, src, label, isFile));
+        el.addEventListener("pointerleave", scheduleHide);
+        el.addEventListener("focusin", () => scheduleShow(el, src, label, isFile));
+        el.addEventListener("focusout", (event) => {
+            if (!el.contains(event.relatedTarget)) scheduleHide();
+        });
+        el.addEventListener("click", hide);
+    };
+
+    document.querySelectorAll("[data-project-card]").forEach((card) => {
+        const id = card.dataset.projectCard;
+        if (!PROJECTS[id]) return;
+        const preview = new URL(location.href);
+        preview.searchParams.set("preview", "1");
+        preview.hash = `project/${id}`;
+        bind(card, preview.href, `#project/${id}`, false);
+    });
+
+    document.querySelectorAll("[data-preview]").forEach((card) => {
+        const src = card.getAttribute("data-preview");
+        if (!src) return;
+        const encoded = encodePath(src);
+        const href = card.getAttribute("href") || src;
+        let label = href;
+        try {
+            label = decodeURIComponent(href.split("/").pop() || href);
+        } catch {
+            label = href.replace(/^files\//, "");
+        }
+        const previewSrc = /\.pdf$/i.test(src) ? `${encoded}#toolbar=0&navpanes=0&view=FitH` : encoded;
+        bind(card, previewSrc, label, true);
+    });
+
+    frame.addEventListener("load", () => {
+        if (pop.hidden) return;
+        const anchor = document.querySelector(".is-previewing");
+        if (anchor) place(anchor);
+    });
+
+    window.addEventListener("scroll", () => {
+        if (!pop.hidden) hide();
+    }, { passive: true });
+}
+
 function renderImageSlide(item, title, active) {
     const caption = escapeHtml(localized(item.caption));
     const alt = escapeHtml(localized(item.alt) || localized(item.caption) || title);
-    return `<button type="button" class="carousel-slide media-open${active ? " is-active" : ""}" data-full="${escapeHtml(item.src)}" data-alt="${alt}" aria-hidden="${active ? "false" : "true"}"><img src="${escapeHtml(item.src)}" alt="${alt}">${caption ? `<p class="hero-image-caption">${caption}</p>` : ""}</button>`;
+    return `<button type="button" class="carousel-slide media-open${active ? " is-active" : ""}" data-full="${escapeHtml(item.src)}" data-alt="${alt}" aria-hidden="${active ? "false" : "true"}"${active ? "" : " hidden"}><img src="${escapeHtml(item.src)}" alt="${alt}">${caption ? `<p class="hero-image-caption">${caption}</p>` : ""}</button>`;
 }
 
 function renderProjectMedia(data) {
@@ -749,8 +865,10 @@ function startCarousel(root, slideNodes) {
     const show = (next) => {
         index = (next + slides.length) % slides.length;
         slides.forEach((slide, i) => {
-            slide.classList.toggle("is-active", i === index);
-            if (slide.hasAttribute("aria-hidden")) slide.setAttribute("aria-hidden", String(i !== index));
+            const active = i === index;
+            slide.classList.toggle("is-active", active);
+            slide.hidden = !active;
+            if (slide.hasAttribute("aria-hidden")) slide.setAttribute("aria-hidden", String(!active));
         });
         dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
     };

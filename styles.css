@@ -1368,10 +1368,11 @@ html[data-theme="light"] .fx-beam {
 }
 
 .project-card:hover,
-.project-card:focus-visible {
-    transform: translateY(-4px);
+.project-card:focus-visible,
+.project-card.is-previewing {
+    transform: translateY(-6px);
     border-color: var(--accent);
-    box-shadow: 0 16px 36px color-mix(in srgb, var(--accent) 18%, transparent);
+    box-shadow: 0 18px 40px color-mix(in srgb, var(--accent) 22%, transparent);
     outline: none;
 }
 
@@ -1693,7 +1694,8 @@ html[data-theme="light"] .panel-certificates .eyebrow { color: #9a7418; }
 }
 
 .panel-projects .project-card:hover,
-.panel-projects .project-card:focus-visible {
+.panel-projects .project-card:focus-visible,
+.panel-projects .project-card.is-previewing {
     border-color: var(--accent-2);
     box-shadow: 0 16px 36px color-mix(in srgb, var(--accent-2) 22%, transparent);
 }
@@ -1746,11 +1748,11 @@ html[data-theme="light"] .panel-certificates .eyebrow { color: #9a7418; }
 }
 
 .panel-certificates .link-list li {
-    text-align: center;
-    padding: 1.1rem 0.9rem;
-    border: 1px solid color-mix(in srgb, #e6c56e 35%, var(--border));
+    text-align: left;
+    padding: 0;
+    border: 0;
     border-radius: 14px;
-    background: color-mix(in srgb, var(--bg) 30%, transparent);
+    background: none;
 }
 
 .panel-certificates .link-list a {
@@ -1934,6 +1936,11 @@ html[data-theme="light"] .panel-certificates .link-list a { color: #8a6410; }
     .carousel-slide,
     .project-thumb img {
         transition: none !important;
+        animation: none !important;
+    }
+
+    .project-card.is-previewing .project-thumb img.is-active {
+        transform: none;
     }
 
     .fx-orbs {
@@ -2106,7 +2113,12 @@ html[data-theme="light"] .carousel-slide .hero-image-caption {
     cursor: zoom-in;
 }
 
-.carousel-slide.is-active {
+button.carousel-slide:not(.is-active),
+button.carousel-slide[hidden] {
+    display: none !important;
+}
+
+button.carousel-slide.is-active {
     display: block;
     position: relative;
     z-index: 1;
@@ -2277,6 +2289,11 @@ html[data-lang="zh"] .project-page-links h3 {
     cursor: zoom-in;
 }
 
+button.carousel-slide.media-open:not(.is-active),
+button.carousel-slide.media-open[hidden] {
+    display: none !important;
+}
+
 .media-dialog {
     position: relative;
     width: min(960px, calc(100vw - 1.25rem));
@@ -2315,7 +2332,7 @@ html[data-lang="zh"] .project-page-links h3 {
     height: clamp(140px, 26vw, 180px);
 }
 
-.project-thumb.has-cover span { display: none; }
+.project-thumb.has-cover > span { display: none; }
 
 .project-thumb img {
     position: absolute;
@@ -2324,11 +2341,183 @@ html[data-lang="zh"] .project-page-links h3 {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 0.7s ease;
+    transform: scale(1);
+    transition: opacity 0.35s ease, transform 0.7s ease;
 }
 
 .project-thumb img.is-active {
     opacity: 1;
+}
+
+.hover-preview {
+    position: fixed;
+    z-index: 80;
+    width: min(22rem, calc(100vw - 1.5rem));
+    pointer-events: none;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-elevated);
+    box-shadow: 0 22px 48px color-mix(in srgb, #000 46%, transparent);
+}
+
+.hover-preview-chrome {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.4rem 0.65rem;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    border-bottom: 1px solid var(--border);
+}
+
+.hover-preview-dots {
+    flex: 0 0 2.1rem;
+    width: 2.1rem;
+    height: 0.42rem;
+    border-radius: 99px;
+    background:
+        radial-gradient(circle at 0.2rem 50%, #ff5f57 0.18rem, transparent 0.2rem),
+        radial-gradient(circle at 0.95rem 50%, #febc2e 0.18rem, transparent 0.2rem),
+        radial-gradient(circle at 1.7rem 50%, #28c840 0.18rem, transparent 0.2rem);
+}
+
+.hover-preview-url {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+}
+
+.hover-preview-stage {
+    position: relative;
+    height: 13.75rem;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+.hover-preview iframe {
+    width: 1280px;
+    height: 800px;
+    border: 0;
+    transform: scale(0.275);
+    transform-origin: top left;
+    pointer-events: none;
+    background: var(--bg);
+}
+
+.hover-preview.is-file .hover-preview-stage {
+    height: 17rem;
+    background: #f4f1ea;
+}
+
+.hover-preview.is-file iframe {
+    width: 1584px;
+    height: 1224px;
+    transform: scale(0.222);
+    transform-origin: top left;
+    background: #f4f1ea;
+}
+
+.cert-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, #e6c56e 35%, var(--border));
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--bg) 30%, transparent);
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cert-card:hover,
+.cert-card:focus-visible,
+.cert-card.is-previewing {
+    transform: translateY(-6px);
+    border-color: #e6c56e;
+    box-shadow: 0 16px 34px color-mix(in srgb, #e6c56e 22%, transparent);
+    outline: none;
+}
+
+.cert-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1.05rem 1rem 1.15rem;
+}
+
+.cert-title {
+    color: inherit;
+    font-weight: 500;
+}
+
+.cert-open {
+    margin-top: 0.2rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #e6c56e;
+}
+
+html[data-lang="zh"] .cert-open {
+    text-transform: none;
+    letter-spacing: 0.04em;
+}
+
+html[data-theme="light"] .cert-open { color: #8a6410; }
+
+html.is-preview-embed .site-header,
+html.is-preview-embed .site-nav,
+html.is-preview-embed .nav-backdrop,
+html.is-preview-embed .site-footer,
+html.is-preview-embed .skip-link,
+html.is-preview-embed .hover-preview,
+html.is-preview-embed .project-page-nav,
+html.is-preview-embed .panel-fx,
+html.is-preview-embed #media-dialog {
+    display: none !important;
+}
+
+html.is-preview-embed {
+    --header-h: 0px;
+}
+
+html.is-preview-embed main > .panel:not(#project-page) {
+    display: none !important;
+}
+
+html.is-preview-embed #project-page {
+    display: block !important;
+}
+
+html.is-preview-embed .wrap {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.cert-preview {
+    display: block;
+    height: 8.5rem;
+    overflow: hidden;
+    background: #f4f1ea;
+    border-bottom: 1px solid var(--border);
+}
+
+.cert-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+}
+
+.hover-preview[hidden] {
+    display: none !important;
 }
 
 @media (max-width: 900px) {
