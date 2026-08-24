@@ -298,8 +298,30 @@
             </div>
             <article class="resume-block">
                 <ul class="link-list">
-                    <li><a href="https://www.coursera.org/account/accomplishments/verify/5RTEXB33Q2HG" target="_blank" rel="noopener noreferrer">Generative AI with LLMs</a><br><span class="meta" data-i18n="cert1Meta">DeepLearning.AI · AWS · Feb 2025</span></li>
-                    <li><a href="https://www.coursera.org/account/accomplishments/verify/TBFRIWA3XZ6O" target="_blank" rel="noopener noreferrer">Exploratory Data Analysis for ML</a><br><span class="meta" data-i18n="cert2Meta">IBM · Jan 2025</span></li>
+                    <li>
+                        <a class="cert-card" href="files/certificates/Generative%20AI%20with%20Large%20Language%20Models.pdf" data-preview="files/certificates/generative-ai-llms.png" target="_blank" rel="noopener noreferrer">
+                            <span class="cert-preview">
+                                <img src="files/certificates/generative-ai-llms.png" alt="Generative AI with Large Language Models certificate">
+                            </span>
+                            <span class="cert-copy">
+                                <span class="cert-title">Generative AI with LLMs</span>
+                                <span class="meta" data-i18n="cert1Meta">DeepLearning.AI · AWS · Feb 2025</span>
+                                <span class="cert-open" data-i18n="openCert">Open credential</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cert-card" href="files/certificates/Exploratory%20Data%20Analysis%20for%20Machine%20Learning.pdf" data-preview="files/certificates/eda-ml.png" target="_blank" rel="noopener noreferrer">
+                            <span class="cert-preview">
+                                <img src="files/certificates/eda-ml.png" alt="Exploratory Data Analysis for Machine Learning certificate">
+                            </span>
+                            <span class="cert-copy">
+                                <span class="cert-title">Exploratory Data Analysis for ML</span>
+                                <span class="meta" data-i18n="cert2Meta">IBM · Jan 2025</span>
+                                <span class="cert-open" data-i18n="openCert">Open credential</span>
+                            </span>
+                        </a>
+                    </li>
                 </ul>
             </article>
             </div>
@@ -383,6 +405,16 @@
         <button type="button" class="icon-btn dialog-close" data-close-media data-i18n-aria="closeMedia" aria-label="Close preview">&times;</button>
         <img id="media-dialog-img" alt="">
     </dialog>
+
+    <div id="hover-preview" class="hover-preview" hidden aria-hidden="true">
+        <div class="hover-preview-chrome">
+            <span class="hover-preview-dots" aria-hidden="true"></span>
+            <span id="hover-preview-url" class="hover-preview-url"></span>
+        </div>
+        <div class="hover-preview-stage">
+            <iframe id="hover-preview-frame" title="Destination preview" src="about:blank" tabindex="-1"></iframe>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
