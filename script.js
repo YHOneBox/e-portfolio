@@ -734,15 +734,6 @@ function setupHoverPreviews() {
         el.addEventListener("click", hide);
     };
 
-    document.querySelectorAll("[data-project-card]").forEach((card) => {
-        const id = card.dataset.projectCard;
-        if (!PROJECTS[id]) return;
-        const preview = new URL(location.href);
-        preview.searchParams.set("preview", "1");
-        preview.hash = `project/${id}`;
-        bind(card, preview.href, `#project/${id}`, false);
-    });
-
     document.querySelectorAll("[data-preview]").forEach((card) => {
         const src = card.getAttribute("data-preview");
         if (!src) return;
