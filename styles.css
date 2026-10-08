@@ -486,6 +486,14 @@ html[data-theme="light"] .theme-icon-sun { display: block; }
     overflow: hidden;
 }
 
+.panel-hero,
+.panel-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100dvh - var(--header-h));
+}
+
 .panel-fx {
     position: absolute;
     inset: 0;
@@ -945,6 +953,11 @@ html[data-theme="light"] .fx-beam {
     min-width: 0;
 }
 
+.panel-hero .wrap,
+.panel-about .wrap {
+    padding: clamp(0.85rem, 2.2vh, 1.75rem) var(--space);
+}
+
 @keyframes grid-drift {
     from { background-position: 0 0, 0 0; }
     to { background-position: 48px 48px, 48px 48px; }
@@ -1098,6 +1111,12 @@ html[data-theme="light"] .fx-beam {
     margin: 0 0 1rem;
 }
 
+.panel-hero .section-heading h2,
+.panel-about .section-heading h2,
+.panel-hero .hero-copy h1 {
+    margin-bottom: 0.55rem;
+}
+
 .hero-copy h1 {
     font-size: clamp(2.1rem, 8vw, 4.4rem);
     overflow-wrap: break-word;
@@ -1116,12 +1135,19 @@ html[data-theme="light"] .fx-beam {
 .about-copy p,
 .timeline p { color: var(--text-muted); }
 
+.about-copy p {
+    margin: 0 0 0.45rem;
+    line-height: 1.45;
+}
+
+.about-copy p:last-child { margin-bottom: 0; }
+
 .section-heading .btn { margin-top: 0.75rem; }
 
 .hero-grid,
 .about-grid {
     display: grid;
-    gap: clamp(1.4rem, 4vw, 2.5rem);
+    gap: clamp(0.85rem, 2vh, 1.6rem);
 }
 
 .hero-grid {
@@ -1234,8 +1260,12 @@ html[data-theme="light"] .fx-beam {
     text-transform: uppercase;
 }
 
+.competency-panel {
+    padding: 0.9rem 1rem;
+}
+
 .competency-group h4 {
-    margin: 0.9rem 0 0.45rem;
+    margin: 0.55rem 0 0.3rem;
     font-size: 0.72rem;
     font-family: var(--mono);
     text-transform: uppercase;
@@ -1744,6 +1774,27 @@ html[data-theme="light"] .panel-certificates .link-list a { color: #8a6410; }
     }
 }
 
+@media (max-width: 1180px) {
+    .about-copy p {
+        font-size: 0.92rem;
+        line-height: 1.38;
+    }
+
+    .competency-panel { padding: 0.65rem 0.75rem; }
+
+    .competency-group h4 { margin: 0.35rem 0 0.22rem; }
+}
+
+@media (max-height: 720px) {
+    .panel-hero .wrap,
+    .panel-about .wrap {
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .about-copy p { line-height: 1.35; }
+}
+
 @media (max-width: 1279px) {
     .project-grid {
         grid-template-columns: 1fr;
@@ -1781,10 +1832,6 @@ html[data-theme="light"] .panel-certificates .link-list a { color: #8a6410; }
     .wrap {
         padding-top: clamp(2rem, 6vw, 3.5rem);
         padding-bottom: clamp(2rem, 6vw, 3.5rem);
-    }
-
-    .hover-preview {
-        display: none !important;
     }
 }
 
@@ -2287,78 +2334,6 @@ button.carousel-slide.media-open[hidden] {
     opacity: 1;
 }
 
-.hover-preview {
-    position: fixed;
-    z-index: 80;
-    width: min(22rem, calc(100vw - 1.5rem));
-    pointer-events: none;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--bg-elevated);
-    box-shadow: 0 22px 48px color-mix(in srgb, #000 46%, transparent);
-}
-
-.hover-preview-chrome {
-    display: flex;
-    align-items: center;
-    gap: 0.55rem;
-    padding: 0.4rem 0.65rem;
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    border-bottom: 1px solid var(--border);
-}
-
-.hover-preview-dots {
-    flex: 0 0 2.1rem;
-    width: 2.1rem;
-    height: 0.42rem;
-    border-radius: 99px;
-    background:
-        radial-gradient(circle at 0.2rem 50%, #ff5f57 0.18rem, transparent 0.2rem),
-        radial-gradient(circle at 0.95rem 50%, #febc2e 0.18rem, transparent 0.2rem),
-        radial-gradient(circle at 1.7rem 50%, #28c840 0.18rem, transparent 0.2rem);
-}
-
-.hover-preview-url {
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-family: var(--mono);
-    font-size: 0.68rem;
-    color: var(--text-muted);
-}
-
-.hover-preview-stage {
-    position: relative;
-    height: 13.75rem;
-    overflow: hidden;
-    background: var(--bg);
-}
-
-.hover-preview iframe {
-    width: 1280px;
-    height: 800px;
-    border: 0;
-    transform: scale(0.275);
-    transform-origin: top left;
-    pointer-events: none;
-    background: var(--bg);
-}
-
-.hover-preview.is-file .hover-preview-stage {
-    height: 17rem;
-    background: #f4f1ea;
-}
-
-.hover-preview.is-file iframe {
-    width: 1584px;
-    height: 1224px;
-    transform: scale(0.222);
-    transform-origin: top left;
-    background: #f4f1ea;
-}
-
 .cert-card {
     display: flex;
     flex-direction: column;
@@ -2373,8 +2348,7 @@ button.carousel-slide.media-open[hidden] {
 }
 
 .cert-card:hover,
-.cert-card:focus-visible,
-.cert-card.is-previewing {
+.cert-card:focus-visible {
     transform: translateY(-6px);
     border-color: #e6c56e;
     box-shadow: 0 16px 34px color-mix(in srgb, #e6c56e 22%, transparent);
@@ -2409,35 +2383,6 @@ html[data-lang="zh"] .cert-open {
 
 html[data-theme="light"] .cert-open { color: #8a6410; }
 
-html.is-preview-embed .site-header,
-html.is-preview-embed .site-nav,
-html.is-preview-embed .nav-backdrop,
-html.is-preview-embed .site-footer,
-html.is-preview-embed .skip-link,
-html.is-preview-embed .hover-preview,
-html.is-preview-embed .project-page-nav,
-html.is-preview-embed .panel-fx,
-html.is-preview-embed #media-dialog {
-    display: none !important;
-}
-
-html.is-preview-embed {
-    --header-h: 0px;
-}
-
-html.is-preview-embed main > .panel:not(#project-page) {
-    display: none !important;
-}
-
-html.is-preview-embed #project-page {
-    display: block !important;
-}
-
-html.is-preview-embed .wrap {
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
-}
-
 .cert-preview {
     display: block;
     height: 8.5rem;
@@ -2452,10 +2397,6 @@ html.is-preview-embed .wrap {
     height: 100%;
     object-fit: contain;
     object-position: center top;
-}
-
-.hover-preview[hidden] {
-    display: none !important;
 }
 
 @media print {
@@ -2505,12 +2446,17 @@ html.is-preview-embed .wrap {
         min-height: 0;
     }
 
+    .panel-hero,
+    .panel-about {
+        min-height: 0 !important;
+        display: block !important;
+    }
+
     .skip-link,
     .site-header,
     .site-nav,
     .nav-backdrop,
     .menu-toggle,
-    .hover-preview,
     .panel-fx,
     .fx-canvas,
     .panel::before,
