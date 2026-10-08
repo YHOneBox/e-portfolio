@@ -1,7 +1,3 @@
-if (new URLSearchParams(location.search).get("preview") === "1") {
-    document.documentElement.classList.add("is-preview-embed");
-}
-
 const I18N = {
     en: {
         skip: "Skip to main content",
@@ -436,9 +432,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setupPanelFx();
     setupProjectPage();
     setupContactForm();
-    if (!document.documentElement.classList.contains("is-preview-embed")) {
-        setupHoverPreviews();
-    }
 });
 
 function setupPanelFx() {
@@ -658,106 +651,6 @@ function applyProjectCovers() {
         img.classList.add("is-active");
         thumb.append(img);
     });
-}
-
-function setupHoverPreviews() {
-    const pop = document.getElementById("hover-preview");
-    const frame = document.getElementById("hover-preview-frame");
-    const urlLabel = document.getElementById("hover-preview-url");
-    if (!pop || !frame) return;
-    if (window.matchMedia("(hover: none)").matches) return;
-
-    let showTimer = 0;
-    let hideTimer = 0;
-    let currentSrc = "";
-
-    const encodePath = (path) => path.split("/").map((part) => encodeURIComponent(part)).join("/");
-
-    const hide = () => {
-        clearTimeout(showTimer);
-        pop.hidden = true;
-        pop.setAttribute("aria-hidden", "true");
-        pop.classList.remove("is-file");
-        frame.src = "about:blank";
-        currentSrc = "";
-        document.querySelectorAll(".is-previewing").forEach((el) => el.classList.remove("is-previewing"));
-    };
-
-    const place = (anchor) => {
-        const rect = anchor.getBoundingClientRect();
-        const gap = 14;
-        const width = pop.offsetWidth || 352;
-        const height = pop.offsetHeight || 260;
-        let left = rect.right + gap;
-        let top = rect.top;
-        if (left + width > window.innerWidth - 12) left = rect.left - width - gap;
-        if (left < 12) left = Math.max(12, (window.innerWidth - width) / 2);
-        if (top + height > window.innerHeight - 12) top = window.innerHeight - height - 12;
-        if (top < 12) top = 12;
-        pop.style.left = `${Math.round(left)}px`;
-        pop.style.top = `${Math.round(top)}px`;
-    };
-
-    const show = (anchor, src, label, isFile) => {
-        clearTimeout(hideTimer);
-        document.querySelectorAll(".is-previewing").forEach((el) => el.classList.remove("is-previewing"));
-        anchor.classList.add("is-previewing");
-        pop.classList.toggle("is-file", Boolean(isFile));
-        if (urlLabel) urlLabel.textContent = label;
-        if (src !== currentSrc) {
-            currentSrc = src;
-            frame.src = src;
-        }
-        pop.hidden = false;
-        pop.setAttribute("aria-hidden", "false");
-        place(anchor);
-    };
-
-    const scheduleShow = (anchor, src, label, isFile) => {
-        clearTimeout(hideTimer);
-        clearTimeout(showTimer);
-        showTimer = window.setTimeout(() => show(anchor, src, label, isFile), 160);
-    };
-
-    const scheduleHide = () => {
-        clearTimeout(showTimer);
-        hideTimer = window.setTimeout(hide, 80);
-    };
-
-    const bind = (el, src, label, isFile) => {
-        el.addEventListener("pointerenter", () => scheduleShow(el, src, label, isFile));
-        el.addEventListener("pointerleave", scheduleHide);
-        el.addEventListener("focusin", () => scheduleShow(el, src, label, isFile));
-        el.addEventListener("focusout", (event) => {
-            if (!el.contains(event.relatedTarget)) scheduleHide();
-        });
-        el.addEventListener("click", hide);
-    };
-
-    document.querySelectorAll("[data-preview]").forEach((card) => {
-        const src = card.getAttribute("data-preview");
-        if (!src) return;
-        const encoded = encodePath(src);
-        const href = card.getAttribute("href") || src;
-        let label = href;
-        try {
-            label = decodeURIComponent(href.split("/").pop() || href);
-        } catch {
-            label = href.replace(/^files\//, "");
-        }
-        const previewSrc = /\.pdf$/i.test(src) ? `${encoded}#toolbar=0&navpanes=0&view=FitH` : encoded;
-        bind(card, previewSrc, label, true);
-    });
-
-    frame.addEventListener("load", () => {
-        if (pop.hidden) return;
-        const anchor = document.querySelector(".is-previewing");
-        if (anchor) place(anchor);
-    });
-
-    window.addEventListener("scroll", () => {
-        if (!pop.hidden) hide();
-    }, { passive: true });
 }
 
 function renderImageSlide(item, title, active) {
